@@ -1,0 +1,50 @@
+DROP TABLE IF EXISTS `plat4m_store`;
+CREATE TABLE `plat4m_store` (
+    `id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    `name` VARCHAR(255) NOT NULL UNIQUE,
+    `address` TEXT NULL DEFAULT NULL,
+    `email` VARCHAR(255) NULL DEFAULT NULL,
+    `phone` VARCHAR(255) NULL DEFAULT NULL,
+    `created_on` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `updated_on` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+    INDEX `idx_store_name` (`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4 AUTO_INCREMENT=1;
+
+
+
+DROP TABLE IF EXISTS `plat4m_user`;
+CREATE TABLE `plat4m_user` (
+    `id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    `name` VARCHAR(255) NOT NULL,
+    `email` VARCHAR(255) NOT NULL UNIQUE,
+    `password` VARCHAR(255) NOT NULL,
+    `store_id` INT NULL DEFAULT NULL,
+    `image` TEXT NULL DEFAULT NULL,
+    `address` TEXT NULL DEFAULT NULL,
+    `phone` VARCHAR(255) NULL DEFAULT NULL,
+    `user_type` VARCHAR(255) NOT NULL,
+    `email_verified` VARCHAR(255) NOT NULL,
+    `created_on` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `updated_on` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+    INDEX `idx_user_email` (`email`),
+    CONSTRAINT `fk_store_in_user` FOREIGN KEY (`store_id`)
+        REFERENCES `plat4m_store` (`id`)
+        ON UPDATE CASCADE
+        ON DELETE RESTRICT
+) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4 AUTO_INCREMENT=1;
+
+
+
+DROP TABLE IF EXISTS `plat4m_user_verify_email_tokens`;
+CREATE TABLE `plat4m_user_verify_email_tokens` (
+    `user_id` INT NOT NULL,
+    `token` VARCHAR(255) NOT NULL,
+    `created_on` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+    CONSTRAINT `fk_user_in_verify_email` FOREIGN KEY (`user_id`)
+        REFERENCES `plat4m_user` (`id`)
+        ON UPDATE CASCADE
+        ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4 AUTO_INCREMENT=1;

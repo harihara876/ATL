@@ -1,0 +1,39 @@
+POST {{host}}/api/api/create-temp-product
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzI3MTk2MTksImp0aSI6IkJUS3FoMzJuZU5ZYVBpaUtBR3pqNWc9PSIsImlzcyI6InBsYXQ0bS5sb2NhbCIsIm5iZiI6MTYzMjcxOTYxOSwiZXhwIjoxNjMyNzIxNDE5LCJ0eXBlIjoiYWNjZXNzIiwiZGF0YSI6eyJpZCI6IjMxIiwibmFtZSI6IkV2YSIsImVtYWlsIjoiZXZhQHQzc3RvcmVzLmNvbSIsInN0b3JlX2FkbWluX2lkIjoiMjYiLCJ0eXBlIjoiRGV2aWNlVXNlciJ9fQ.jd8L0nrDAJvzdWkftZ5Py0b7UaKIL0yFtBv7KzTGdyamCNfEF1Or1fcgdWUVFxug9EnZJlFJqBeRG6g5oqrTjg
+
+{
+    "product_name":"Unknown",
+    "product_id":0,
+    "cat_id":0,
+    "description":"",
+    "price":12.49,
+    "selling_price":12.49,
+    "color":"",
+    "size":"",
+    "product_status":"",
+    "quantity":0,
+    "date":"",
+    "p_limit":0,
+    "upc":"735975213055",
+    "regular_price":12.49,
+    "buying_price":12.44,
+    "tax_status":"CA Tax",
+    "tax_value":0.09,
+    "special_value":"",
+    "category_id":0,
+    "category_type":"",
+    "date_created":"",
+    "sku":"",
+    "image":"",
+    "stock_quantity":"",
+    "manufacturer":"",
+    "brand":"",
+    "vendor":"",
+    "product_mode":0,
+    "age_restriction":0,
+    "sale_type":0,
+    "storeadmin_id":33,
+    "multi_item_quantity":4,
+    "multi_item_price":10.99
+}

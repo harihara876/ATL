@@ -1,0 +1,16 @@
+Check hardcoded URLs while merging branches.
+/home/kpteja/workspace/plat4minc/plat4minc-webapp/resources/T3Stores/Store/TemporaryProduct.php
+func getStoreProduct
+
+// createStoreTempProductV1
+// Check if UPC exists in product catalogue.
+// If exists
+//      Check if UPC exists in store products.
+//      If NOT exists
+//          Copy product from catalogue to store with new values.
+//      Return product.
+// Else
+//      Check if UPC exists in `products_temp` table.
+//      If NOT exists
+//          Create product in `products_temp` table.
+//      Return product.

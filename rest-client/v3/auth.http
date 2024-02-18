@@ -1,0 +1,64 @@
+### User login.
+POST https://dev.plat4minc.com/api/v3/auth/login
+Content-Type: application/json
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 93db3c71-979f-4181-b7ea-b8fdf93b0754
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+
+{
+    "email": "kpteja030393@gmail.com",
+    "password": "54321"
+}
+
+# {
+#     "email": "lakevistaliquors@t3stores.com",
+#     "password": "12345"
+# }
+
+# {
+#     "email": "david.miller@domain.com",
+#     "password": "DavidMiller@123"
+# }
+
+# {
+#     "email": "john.doe@domain.com",
+#     "password": "JameD0e@456"
+# }
+
+# {
+#     "email": "standardliquor@gmail.com",
+#     "password": "1234"
+# }
+
+
+
+### Reset password request.
+POST https://dev.plat4minc.com/api/v3/user/password/reset/request
+Content-Type: application/json
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 93db3c71-979f-4181-b7ea-b8fdf93b0754
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+
+{
+    "email": "poornatejakonatham@gmail.com"
+}
+
+
+### Reset password redeem.
+POST https://dev.plat4minc.com/api/v3/user/password/reset/redeem
+Content-Type: application/json
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 93db3c71-979f-4181-b7ea-b8fdf93b0754
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+
+{
+    "email": "poornatejakonatham@gmail.com",
+    "otp": "7313",
+    "password": "54321"
+}

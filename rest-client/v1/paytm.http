@@ -1,0 +1,2 @@
+### Create QR code.
+curl -X POST 'https://securegw-stage.paytm.in/paymentservices/qr/create' --header 'Content-Type: application/json' --data '{"body":{"mid": "owEsZy75824227543062", "orderId": "OREDRID98765", "amount": "1303.00","businessType": "UPI_QR_CODE","posId": "S12_123"}, "head": {"clientId": "C11", "version": "v1"}}'

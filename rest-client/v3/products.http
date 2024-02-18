@@ -1,0 +1,162 @@
+### List store products.
+GET {{host}}/api/v3/store/products
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 93db3c71-979f-4181-b7ea-b8fdf93b0754
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzczODMzNTQsImp0aSI6IkZyNEVOVGd0WnVxTEFzWElFa1Zud1E9PSIsImlzcyI6InBsYXQ0bS5sb2NhbCIsIm5iZiI6MTYzNzM4MzM1NCwiZXhwIjoxNjM3Mzg1MTU0LCJ0eXBlIjoiYWNjZXNzIiwiZGF0YSI6eyJpZCI6MzMsIm5hbWUiOiJMYWtlIFZpc3RhICIsImVtYWlsIjoibGFrZXZpc3RhbGlxdW9yc0B0M3N0b3Jlcy5jb20iLCJzdG9yZV9hZG1pbl9pZCI6MzMsInR5cGUiOiJzdG9yZWFkbWluIiwicmVnaXN0ZXJlZF9hcHAiOiJjb20ucGxhdDRtaW5jLm15c3RvcmUifX0.Lg7keJOeQpR4-gOmklM-Pq_qsH-R42Z-ni7T98xpxeHv7Mg5YiOBPgCg0xR-l_zg20hGVLbAqoHnpAMNRJzfqQ
+
+
+
+### List store temp products.
+GET {{host}}/api/v3/store/products/temp
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 93db3c71-979f-4181-b7ea-b8fdf93b0754
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzY0MzQ1MzYsImp0aSI6IkZheHZIeEpJZEpLaisyWjRDRGs3R3c9PSIsImlzcyI6InBsYXQ0bS5sb2NhbCIsIm5iZiI6MTYzNjQzNDUzNiwiZXhwIjoxNjM2NDM2MzM2LCJ0eXBlIjoiYWNjZXNzIiwiZGF0YSI6eyJpZCI6IjMzIiwibmFtZSI6Ikxha2UgVmlzdGEgIiwiZW1haWwiOiJsYWtldmlzdGFsaXF1b3JzQHQzc3RvcmVzLmNvbSIsInN0b3JlX2FkbWluX2lkIjoiMzMiLCJ0eXBlIjoic3RvcmVhZG1pbiIsInJlZ2lzdGVyZWRfYXBwIjoiY29tLnBsYXQ0bWluYy5teXN0b3JlIn19.gQ-bkcWebqeAa-fNNpCW-x9anxNG6U4FZpOOxV50L4b83i9U5GuCHYHFVLP2BY6JG_qeoDzWEfH4MMjbv3QYTg
+
+
+
+### List store temp2 products.
+GET {{host}}/api/v3/store/products/temp2
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 93db3c71-979f-4181-b7ea-b8fdf93b0754
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzYzNzYyMDIsImp0aSI6IkdEazdLcW5lZVdaOGNYU3A1anhvYUE9PSIsImlzcyI6InBsYXQ0bS5sb2NhbCIsIm5iZiI6MTYzNjM3NjIwMiwiZXhwIjoxNjM2Mzc4MDAyLCJ0eXBlIjoiYWNjZXNzIiwiZGF0YSI6eyJpZCI6IjMzIiwibmFtZSI6Ikxha2UgVmlzdGEgIiwiZW1haWwiOiJsYWtldmlzdGFsaXF1b3JzQHQzc3RvcmVzLmNvbSIsInN0b3JlX2FkbWluX2lkIjoiMzMiLCJ0eXBlIjoic3RvcmVhZG1pbiIsInJlZ2lzdGVyZWRfYXBwIjoiY29tLnBsYXQ0bWluYy5teXN0b3JlIn19.glJNWzHO1rko7MXm18ypzGg1tzCzTpO19mfM8Kk7zUOUt6v24CAcW-rWNdRzBUC4QPcMJZNcd0Pc_3FBhYcXDg
+
+
+
+### Get product info.
+@upc = 111145
+GET {{host}}/api/v3/store/product/upc/{{upc}}
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 93db3c71-979f-4181-b7ea-b8fdf93b0754
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzczODMzNTQsImp0aSI6IkZyNEVOVGd0WnVxTEFzWElFa1Zud1E9PSIsImlzcyI6InBsYXQ0bS5sb2NhbCIsIm5iZiI6MTYzNzM4MzM1NCwiZXhwIjoxNjM3Mzg1MTU0LCJ0eXBlIjoiYWNjZXNzIiwiZGF0YSI6eyJpZCI6MzMsIm5hbWUiOiJMYWtlIFZpc3RhICIsImVtYWlsIjoibGFrZXZpc3RhbGlxdW9yc0B0M3N0b3Jlcy5jb20iLCJzdG9yZV9hZG1pbl9pZCI6MzMsInR5cGUiOiJzdG9yZWFkbWluIiwicmVnaXN0ZXJlZF9hcHAiOiJjb20ucGxhdDRtaW5jLm15c3RvcmUifX0.Lg7keJOeQpR4-gOmklM-Pq_qsH-R42Z-ni7T98xpxeHv7Mg5YiOBPgCg0xR-l_zg20hGVLbAqoHnpAMNRJzfqQ
+
+
+
+### Create store temp product.
+POST {{host}}/api/v3/store/product/temp/create
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 93db3c71-979f-4181-b7ea-b8fdf93b0754
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzczODEyMDUsImp0aSI6IjNoVyt6d0ttYk1jdklPYlAyRHBNcWc9PSIsImlzcyI6InBsYXQ0bS5sb2NhbCIsIm5iZiI6MTYzNzM4MTIwNSwiZXhwIjoxNjM3MzgzMDA1LCJ0eXBlIjoiYWNjZXNzIiwiZGF0YSI6eyJpZCI6MzMsIm5hbWUiOiJMYWtlIFZpc3RhICIsImVtYWlsIjoibGFrZXZpc3RhbGlxdW9yc0B0M3N0b3Jlcy5jb20iLCJzdG9yZV9hZG1pbl9pZCI6MzMsInR5cGUiOiJzdG9yZWFkbWluIiwicmVnaXN0ZXJlZF9hcHAiOiJjb20ucGxhdDRtaW5jLm15c3RvcmUifX0.tQ2b4BtioUjqF8CQ7uaR7z6HwMMBx9yzYRibo3xprcqyrLMWTNI3b3QKMLwiPac5c_1YMTBK0UQ3mrdT0LgPaw
+
+{
+    "name": "NO TAX $5",
+    "upc": "1111190",
+    "category_id": 40,
+    "subcategory_id": 0,
+    "image_url": "",
+    "brand": "plat4m",
+    "manufacturer": "plat4m",
+    "vendor": "plat4m",
+    "description": "test123gddfshdfsgh",
+    "pos_description": "",
+    "status": "1",
+    "product_status": "Instock",
+    "color": "",
+    "size": "",
+    "sku": 11,
+    "quantity": 20,
+    "stock_quantity": 20,
+    "age_restriction": 0,
+    "sale_type": "0",
+    "price": 5.00,
+    "regular_price": 1.20,
+    "buying_price": 5.00,
+    "selling_price": 5.00,
+    "special_value": 0.0,
+    "tax_status": "NULL",
+    "tax_value": 0.0,
+    "multi_item_quantity": 2,
+    "multi_item_price": 12.00,
+    "discount_percent": 0,
+    "discount_pretax": 0,
+    "discount_posttax": 1,
+    "per_order_limit": 1,
+    "product_mode": "0",
+    "upc_status_request": 1
+}
+
+
+
+### Copy product from catalogue to store.
+POST {{host}}/api/v3/store/product/upc/111119/copy-from-catalogue
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 93db3c71-979f-4181-b7ea-b8fdf93b0754
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzY4MDA4MjEsImp0aSI6ImpVcnVhZ1pPeGRkK2h6NklsTTJ2TlE9PSIsImlzcyI6InBsYXQ0bS5sb2NhbCIsIm5iZiI6MTYzNjgwMDgyMSwiZXhwIjoxNjM2ODAyNjIxLCJ0eXBlIjoiYWNjZXNzIiwiZGF0YSI6eyJpZCI6IjMzIiwibmFtZSI6Ikxha2UgVmlzdGEgIiwiZW1haWwiOiJsYWtldmlzdGFsaXF1b3JzQHQzc3RvcmVzLmNvbSIsInN0b3JlX2FkbWluX2lkIjoiMzMiLCJ0eXBlIjoic3RvcmVhZG1pbiIsInJlZ2lzdGVyZWRfYXBwIjoiY29tLnBsYXQ0bWluYy5teXN0b3JlIn19.pJdh8xXkDTES1dvPjsGReGwgcDQJqLRE5ax_h21mQG5c37W3oIqquS23jbukusBFiPWqx40KYVTIUiDLderK-w
+
+
+
+### Upload product image.
+POST {{host}}/api/v3/store/product-image/upload
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 93db3c71-979f-4181-b7ea-b8fdf93b0754
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzY4MDA4MjEsImp0aSI6ImpVcnVhZ1pPeGRkK2h6NklsTTJ2TlE9PSIsImlzcyI6InBsYXQ0bS5sb2NhbCIsIm5iZiI6MTYzNjgwMDgyMSwiZXhwIjoxNjM2ODAyNjIxLCJ0eXBlIjoiYWNjZXNzIiwiZGF0YSI6eyJpZCI6IjMzIiwibmFtZSI6Ikxha2UgVmlzdGEgIiwiZW1haWwiOiJsYWtldmlzdGFsaXF1b3JzQHQzc3RvcmVzLmNvbSIsInN0b3JlX2FkbWluX2lkIjoiMzMiLCJ0eXBlIjoic3RvcmVhZG1pbiIsInJlZ2lzdGVyZWRfYXBwIjoiY29tLnBsYXQ0bWluYy5teXN0b3JlIn19.pJdh8xXkDTES1dvPjsGReGwgcDQJqLRE5ax_h21mQG5c37W3oIqquS23jbukusBFiPWqx40KYVTIUiDLderK-w
+Content-Type: multipart/form-data
+
+
+### Get product price range.
+@upc = 111111
+@product_id = 1000370001
+GET {{host}}/api/v3/store/product/{{product_id}}/upc/{{upc}}/price-range
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 93db3c71-979f-4181-b7ea-b8fdf93b0754
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzY5MDU4NjcsImp0aSI6IlNXXC9jcEhjdHpaNk8yUFlJMlN0QlFBPT0iLCJpc3MiOiJwbGF0NG0ubG9jYWwiLCJuYmYiOjE2MzY5MDU4NjcsImV4cCI6MTYzNjkwNzY2NywidHlwZSI6ImFjY2VzcyIsImRhdGEiOnsiaWQiOiIzMyIsIm5hbWUiOiJMYWtlIFZpc3RhICIsImVtYWlsIjoibGFrZXZpc3RhbGlxdW9yc0B0M3N0b3Jlcy5jb20iLCJzdG9yZV9hZG1pbl9pZCI6IjMzIiwidHlwZSI6InN0b3JlYWRtaW4iLCJyZWdpc3RlcmVkX2FwcCI6ImNvbS5wbGF0NG1pbmMubXlzdG9yZSJ9fQ.I6bJoKka9LK8SgkaQKSI01GI5tV9rB4LIO90TrR1eji27UEUCBxV0GdxD6lJW5XpWxAXlVO2oQLTEItDwhu7hQ
+
+
+
+### Update product description.
+@product_id = 1000370001
+PUT {{host}}/api/v3/store/product/{{product_id}}/update
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 93db3c71-979f-4181-b7ea-b8fdf93b0754
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzY5MDk3NTgsImp0aSI6IlFweXhBdDh3TDUyRnNseFN4NTVPK2c9PSIsImlzcyI6InBsYXQ0bS5sb2NhbCIsIm5iZiI6MTYzNjkwOTc1OCwiZXhwIjoxNjM2OTExNTU4LCJ0eXBlIjoiYWNjZXNzIiwiZGF0YSI6eyJpZCI6IjMzIiwibmFtZSI6Ikxha2UgVmlzdGEgIiwiZW1haWwiOiJsYWtldmlzdGFsaXF1b3JzQHQzc3RvcmVzLmNvbSIsInN0b3JlX2FkbWluX2lkIjoiMzMiLCJ0eXBlIjoic3RvcmVhZG1pbiIsInJlZ2lzdGVyZWRfYXBwIjoiY29tLnBsYXQ0bWluYy5teXN0b3JlIn19.fn01POMNBuFiKmBmBgaK1xG1i5hngMT3SEQzHC3qhoedpXAbNIsCunnzKWrlmw7_-FfuHpDKaTCEWv5a7xlE7w
+
+{
+    "description": "King Cobra Premium Malt Liquor TEST"
+}
+
+
+
+### Update product price.
+@product_id = 1000370001
+POST {{host}}/api/v3/store/product/{{product_id}}/price/change
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 93db3c71-979f-4181-b7ea-b8fdf93b0754
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzY5MDk3NTgsImp0aSI6IlFweXhBdDh3TDUyRnNseFN4NTVPK2c9PSIsImlzcyI6InBsYXQ0bS5sb2NhbCIsIm5iZiI6MTYzNjkwOTc1OCwiZXhwIjoxNjM2OTExNTU4LCJ0eXBlIjoiYWNjZXNzIiwiZGF0YSI6eyJpZCI6IjMzIiwibmFtZSI6Ikxha2UgVmlzdGEgIiwiZW1haWwiOiJsYWtldmlzdGFsaXF1b3JzQHQzc3RvcmVzLmNvbSIsInN0b3JlX2FkbWluX2lkIjoiMzMiLCJ0eXBlIjoic3RvcmVhZG1pbiIsInJlZ2lzdGVyZWRfYXBwIjoiY29tLnBsYXQ0bWluYy5teXN0b3JlIn19.fn01POMNBuFiKmBmBgaK1xG1i5hngMT3SEQzHC3qhoedpXAbNIsCunnzKWrlmw7_-FfuHpDKaTCEWv5a7xlE7w
+
+{
+    "regular_price": 15.05,
+    "multi_item_quantity": 0,
+    "multi_item_price": 0.0,
+    "discount_percent": 20,
+    "discount_pretax": 1,
+    "discount_posttax": 0
+}

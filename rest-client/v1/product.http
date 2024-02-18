@@ -1,0 +1,132 @@
+### Store ID.
+@storeID = 39
+
+
+### Get all products.
+GET {{host}}/api/api/Products
+
+
+
+### Get all products by store ID.
+POST {{host}}/api/api/storeproducts
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzQzNTgyMTgsImp0aSI6IkJnMVh1UERuV0JtdlpqRjExb3J4NWc9PSIsImlzcyI6Im15c3RvcmUucGxhdDRtaW5jLmNvbSIsIm5iZiI6MTYzNDM1ODIxOCwiZXhwIjoxNjM0MzYwMDE4LCJ0eXBlIjoiYWNjZXNzIiwiZGF0YSI6eyJpZCI6IjMzIiwibmFtZSI6Ikxha2UgVmlzdGEgIiwiZW1haWwiOiJsYWtldmlzdGFsaXF1b3JzQHQzc3RvcmVzLmNvbSIsInN0b3JlX2FkbWluX2lkIjoiMzMiLCJ0eXBlIjoic3RvcmVhZG1pbiJ9fQ.XWq7OpnvzhPl3dfevX74qwOIkN8su5eNdHEOhw9b5AEWbS_P_nSiReD8ZTPXEEvoa5EFmY1QuyjyM6sJlcAAkA
+
+{
+    "storeid": 33
+}
+
+
+
+### Get all temp products by store ID.
+POST {{host}}/api/api/get-temp-products
+Content-Type: application/json
+
+{
+    "storeid": 26
+}
+
+
+
+### Update regular price.
+POST {{host}}/api/api/update-regular-price
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2Mjc4OTk3MTQsImp0aSI6IkhRK1RkSlh1V0hLU1B2SUorcVcyeXc9PSIsImlzcyI6InBsYXQ0bS5sb2NhbCIsIm5iZiI6MTYyNzg5OTcxNCwiZXhwIjoxNjI3OTAxNTE0LCJ0eXBlIjoiYWNjZXNzIiwiZGF0YSI6eyJpZCI6IjMzIiwibmFtZSI6Ikxha2UgVmlzdGEgIiwiZW1haWwiOiJsYWtldmlzdGFsaXF1b3JzQHQzc3RvcmVzLmNvbSIsInN0b3JlX2FkbWluX2lkIjoiMzMiLCJ0eXBlIjoic3RvcmVhZG1pbiJ9fQ.LEIeo0qpPqa5_mHcSdCcb6f_RhGztckY-yPZu8479DbaSUisJZztLUe0y-XHyD5xSpZISqmzUhdE9rZihs1hdA
+
+{
+    "multi_item_price":10.69,
+    "multi_item_quantity":3,
+    "product_id":"1000372776",
+    "regular_price":0.66,
+    "storeid":33
+}
+
+###
+# {
+#     "product_id":"1000370007",
+#     "regular_price":6.99,
+#     "multi_item_quantity": 3,
+#     "multi_item_price": 5.99,
+#     "storeid":33
+# }
+
+
+
+
+
+### Update store product info.
+POST {{host}}/api/api/update-store-product
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MjU4MDQzMDgsImp0aSI6ImNhOVwvWVJXMG5OeWZcL1VBQUNhZGVGZz09IiwiaXNzIjoicGxhdDRtLmxvY2FsIiwibmJmIjoxNjI1ODA0MzA4LCJleHAiOjE2MjU4MDYxMDgsImRhdGEiOnsiaWQiOiIzMyIsIm5hbWUiOiJMYWtlIFZpc3RhICIsImVtYWlsIjoibGFrZXZpc3RhbGlxdW9yc0B0M3N0b3Jlcy5jb20iLCJzdG9yZV9hZG1pbl9pZCI6IjMzIiwidHlwZSI6InN0b3JlYWRtaW4ifX0.ieRf4-fyHBceRmicbciUA9bGHvNiTz6VS4qNcJPMUTfmQbG4SNcFb9uNAgab5jWaqdFLzTSbrFARsIJFLdtPDw
+
+{
+    "storeid": 26,
+    "product_id": "1000370001",
+    "description": "Hello 1234"
+}
+
+
+
+### Get product selling price range.
+POST {{host}}/api/api/product-price-range
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MjU3MjAzNTcsImp0aSI6IlIwYkFsVlk1a2xJSUJTZVpwWXNObGc9PSIsImlzcyI6ImRldi5wbGF0NG1pbmMuY29tIiwibmJmIjoxNjI1NzIwMzU3LCJleHAiOjE2MjU3MjIxNTcsImRhdGEiOnsiaWQiOiIzMyIsIm5hbWUiOiJMYWtlIFZpc3RhICIsImVtYWlsIjoibGFrZXZpc3RhbGlxdW9yc0B0M3N0b3Jlcy5jb20iLCJzdG9yZV9hZG1pbl9pZCI6IjMzIiwidHlwZSI6InN0b3JlYWRtaW4ifX0.unHKo7Pd--9fVBwir8CG_JH03UX5geVrZs2EYwj0zroJbX9svkvrXDxdGtdEylwDrzok5zKzpfGGaVg1b-ulAg
+
+{
+    "product_id": "1",
+    "upc": "794504454925"
+}
+
+
+
+### Get product
+POST {{host}}/api/api/getproduct
+
+{
+    "upc":"018200250118",
+    "storeadmin_id":26
+}
+
+
+
+### Create store product.
+POST {{host}}/api/api/v1/store/{{storeID}}/product
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzQ3MDkyMTAsImp0aSI6IjNPT2tMNGVJelhXd0YzTm9JOVwvM1l3PT0iLCJpc3MiOiJwbGF0NG0ubG9jYWwiLCJuYmYiOjE2MzQ3MDkyMTAsImV4cCI6MTYzNDcxMTAxMCwidHlwZSI6ImFjY2VzcyIsImRhdGEiOnsiaWQiOiIzMyIsIm5hbWUiOiJMYWtlIFZpc3RhICIsImVtYWlsIjoibGFrZXZpc3RhbGlxdW9yc0B0M3N0b3Jlcy5jb20iLCJzdG9yZV9hZG1pbl9pZCI6IjMzIiwidHlwZSI6InN0b3JlYWRtaW4iLCJyZWdpc3RlcmVkX2FwcCI6ImNvbS5wbGF0NG1pbmMubXlzdG9yZSJ9fQ.GgA_v3K2WDWQP5RtJh8nIZZgdth8_4oSz14pI4bq6FOJOG-oVvZnfeYaATDy4OAoCgk1J-7psf1j1I8x_Cg_8Q
+
+{
+    "product_name":"Absolut  Citron 50ml",
+    "product_id":"1000370149",
+    "cat_id":"21",
+    "description":"Absolut  Citron 50ml",
+    "price":25.0,
+    "selling_price":25.0,
+    "color":" ",
+    "size":" ",
+    "product_status":" ",
+    "quantity":"10",
+    "date":"2020-12-14",
+    "p_limit":"10",
+    "upc":"835229001008",
+    "regular_price":25.0,
+    "buying_price":0.0,
+    "tax_status":"CA Tax",
+    "tax_value":"0.09",
+    "special_value":"",
+    "category_id":"21",
+    "category_type":"1043",
+    "date_created":"2020-12-14",
+    "sku":" ",
+    "image":"",
+    "stock_quantity":"10",
+    "manufacturer":" ",
+    "brand":" ",
+    "vendor":" ",
+    "product_mode":"0",
+    "age_restriction":"0",
+    "sale_type":"0",
+    "storeadmin_id":33,
+    "multi_item_quantity":0,
+    "multi_item_price":"0.00",
+    "discount_percent":0,
+    "discount_pretax":0,
+    "discount_posttax":0
+}

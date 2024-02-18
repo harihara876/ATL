@@ -1,0 +1,88 @@
+### Get all device users.
+GET {{host}}/api/api/get-device-users
+
+
+
+### Create admin user.
+POST {{host}}/api/api/create-admin-user
+Content-Type: application/json
+X-Plat4m-App-Name: com.plat4minc.mystore.clover
+
+{
+    "name": "John Miller",
+    "email": "john.miller.admin2@gmail.com",
+    "password": "1234"
+}
+
+
+
+### Create device user.
+POST {{host}}/api/api/create-device-user
+Content-Type: application/json
+
+{
+    "first_name": "John",
+    "last_name": "Miller",
+    "email": "john.miller2@gmail.com",
+    "password": "1234",
+    "storeadmin_id": "35"
+}
+
+
+###
+POST {{host}}/api/api/create-device-user
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzQxMDgwOTgsImp0aSI6IkdET1RXcmtBbjlQN0Q5V2tsdUY4cGc9PSIsImlzcyI6InBsYXQ0bS5sb2NhbCIsIm5iZiI6MTYzNDEwODA5OCwiZXhwIjoxNjM0MTA5ODk4LCJ0eXBlIjoiYWNjZXNzIiwiZGF0YSI6eyJpZCI6IjMzIiwibmFtZSI6Ikxha2UgVmlzdGEgIiwiZW1haWwiOiJsYWtldmlzdGFsaXF1b3JzQHQzc3RvcmVzLmNvbSIsInN0b3JlX2FkbWluX2lkIjoiMzMiLCJ0eXBlIjoic3RvcmVhZG1pbiIsInJlZ2lzdGVyZWRfYXBwIjoiY29tLnBsYXQ0bWluYy5teXN0b3JlIn19.b6PNbTeTyUDZzBp69nrzLuNYYQOFdCppYK56tMGVCUhmtBfr2nATtgT25AdAXOZeSJ9xDBpcg2TxORXoFJA1Rw
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 82943791-7dcd-4f28-bb41-74e2399ff790
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+
+{
+    "email":"pavaninagulapati2000@gmail.com",
+    "first_name":"testplat4m",
+    "last_name":"plat4m",
+    "mobile_number":"6309591983",
+    "password":"plat4m",
+    "store_address":"guntur",
+    "store_city":"guntur",
+    "store_country":"India",
+    "store_name":"Testplat4m",
+    "store_type":"Store Owner",
+    "store_zip":"522647"
+}
+
+
+###
+POST https://dev.plat4minc.com/api/api/create-device-user
+
+
+
+### Update device user.
+POST {{host}}/api/api/update-device-user
+Content-Type: application/json
+
+{
+    "id": 41,
+    "first_name": "John",
+    "last_name": "Miller",
+    "email": "john.miller@gmail.com"
+}
+
+
+
+### Update admin user.
+POST {{host}}/api/api/update-admin-user
+Content-Type: application/json
+
+{
+    "id": 39,
+    "name": "David Miller",
+    "email": "david.miller@gmail.com"
+}
+
+
+
+### Get all price change users. ???
+GET {{host}}/api/api/order-new-price

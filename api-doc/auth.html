@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication | Plat4m API Documentation</title>
+    <link rel="stylesheet" href="./assets/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/api-doc/index.html">Plat4m API Documentation</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Authentication</li>
+            </ol>
+        </nav>
+        <div>
+            <h1 id="authentication">Authentication</h1>
+            <p>JWTs are used for authentication. APIs which require authorized user expects JWT in
+                <code>Authorization</code> header. JWTs are issued when user is authenticated successfully.
+            </p>
+            <p>Server expects JWTs in below format:</p>
+            <blockquote>
+                <p><code>Bearer eyJhbGciOiJIUzI1NiIsInR5...</code></p>
+            </blockquote>
+            <p>Below attributes are expected in response payload to maintain sessions.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Attribute</th>
+                        <th>Type</th>
+                        <th>Editable</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>access_token</code></td>
+                        <td>string</td>
+                        <td>no</td>
+                        <td>Access token (JWT) used to maintain session.</td>
+                    </tr>
+                    <tr>
+                        <td><code>refresh_token</code></td>
+                        <td>string</td>
+                        <td>no</td>
+                        <td>Refresh token (JWT) used to fetch new pair of access and refresh tokens</td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <h2 id="-admin-or-cashier-login-"><em>Admin or Cashier Login</em></h2>
+            <h3 id="-post-api-v3-auth-login-"><strong>POST</strong> <code>/api/v3/auth/login</code></h3>
+            <p>Authenticates user and issues JWTs to maintain sessions.</p>
+            <h4 id="request">Request</h4>
+            <pre><code>{
+    <span class="hljs-attr">"email"</span>: <span class="hljs-string">"john.doe@domain.com"</span>,
+    <span class="hljs-attr">"password"</span>: <span class="hljs-string">"J0hnDoe@123"</span>
+}
+</code></pre>
+            <blockquote>
+                <p><strong>Mandatory</strong>: <code>email, password</code>.</p>
+            </blockquote>
+            <h4 id="response">Response</h4>
+            <pre><code>{
+    <span class="hljs-attr">"id"</span>: <span class="hljs-number">456</span>,
+    <span class="hljs-attr">"first_name"</span>: <span class="hljs-string">"John"</span>,
+    <span class="hljs-attr">"last_name"</span>: <span class="hljs-string">"Doe"</span>,
+    <span class="hljs-attr">"email"</span>: <span class="hljs-string">"john.doe@domain.com"</span>,
+    <span class="hljs-attr">"mobile_number"</span>: <span class="hljs-string">"+918987678732"</span>,
+    <span class="hljs-attr">"admin_id"</span>: <span class="hljs-number">123</span>,
+    <span class="hljs-attr">"role"</span>: <span class="hljs-string">"cashier"</span>,
+    <span class="hljs-attr">"paytm_credentials"</span>: {
+        <span class="hljs-attr">"merchant_id"</span>: <span class="hljs-string">"LUfX+OlJ0co7QGB5..."</span>,
+        <span class="hljs-attr">"merchant_key"</span>: <span class="hljs-string">"NlAg+8Jwt3RtDrPDo..."</span>
+    },
+    <span class="hljs-attr">"currency"</span>: <span class="hljs-string">"USD"</span>,
+    <span class="hljs-attr">"currency_symbol"</span>: <span class="hljs-string">"$"</span>,
+    <span class="hljs-attr">"access_token"</span>: <span class="hljs-string">"eyJhbGciOiJIUzI1NiIsInR5..."</span>,
+    <span class="hljs-attr">"refresh_token"</span>: <span class="hljs-string">"eyJhbGciOiJIUzI1NiIsInR5..."</span>
+}
+</code></pre>
+            <hr>
+            <h2 id="-refresh-tokens-"><em>Refresh Tokens</em></h2>
+            <h3 id="-get-api-v3-auth-refresh-"><strong>GET</strong> <code>/api/v3/auth/refresh</code></h3>
+            <p>Issues new pair of access and refresh tokens. Current refresh token is expected in
+                <code>Authorization</code> header.
+            </p>
+            <h4 id="request">Request</h4>
+            <pre><code><span class="hljs-keyword">Not</span> required.
+</code></pre>
+            <h4 id="response">Response</h4>
+            <pre><code>{
+    <span class="hljs-attr">"access_token"</span>: <span class="hljs-string">"eyJhbGciOiJIUzI1NiIsInR5..."</span>,
+    <span class="hljs-attr">"refresh_token"</span>: <span class="hljs-string">"eyJhbGciOiJIUzI1NiIsInR5..."</span>
+}
+</code></pre>
+            <hr>
+            <h2 id="-admin-or-cashier-logout-"><em>Admin or Cashier Logout</em></h2>
+            <h3 id="-get-api-v3-auth-logout-"><strong>GET</strong> <code>/api/v3/auth/logout</code></h3>
+            <p>Clears sessions of Admin or Cashier based on access token.</p>
+            <h4 id="request">Request</h4>
+            <pre><code><span class="hljs-keyword">Not</span> required.
+</code></pre>
+            <h4 id="response">Response</h4>
+            <pre><code><span class="hljs-keyword">Not</span> required.
+</code></pre>
+            <hr>
+            <h2 id="-admin-or-cashier-force-login-request-"><em>Admin or Cashier Force Login Request</em></h2>
+            <h3 id="-post-api-v3-auth-login-force-request-"><strong>POST</strong>
+                <code>/api/v3/auth/login/force/request</code>
+            </h3>
+            <p>Sends an OTP to the registered email to verify if admin or cashier has right to force login.</p>
+            <h4 id="request">Request</h4>
+            <pre><code>{
+    <span class="hljs-attr">"email"</span>: <span class="hljs-string">"john.doe@domain.com"</span>
+}
+</code></pre>
+            <blockquote>
+                <p><strong>Mandatory</strong>: <code>email</code>.</p>
+            </blockquote>
+            <h4 id="response">Response</h4>
+            <pre><code>{
+    <span class="hljs-attr">"message"</span>: <span class="hljs-string">"An OTP has sent to the registered email. Use the OTP to force login."</span>
+}
+</code></pre>
+            <hr>
+            <h2 id="-admin-or-cashier-force-login-"><em>Admin or Cashier Force Login</em></h2>
+            <h3 id="-post-api-v3-auth-login-force-"><strong>POST</strong> <code>/api/v3/auth/login/force</code></h3>
+            <p>Authenticates user using the OTP, removes all other sessions except the session and issues JWTs to
+                maintain new sessions.</p>
+            <h4 id="request">Request</h4>
+            <pre><code>{
+    <span class="hljs-attr">"email"</span>: <span class="hljs-string">"john.doe@domain.com"</span>,
+    <span class="hljs-attr">"otp"</span>: <span class="hljs-string">"8098"</span>
+}
+</code></pre>
+            <blockquote>
+                <p><strong>Mandatory</strong>: <code>email, otp</code>.</p>
+            </blockquote>
+            <h4 id="response">Response</h4>
+            <pre><code>{
+    <span class="hljs-attr">"id"</span>: <span class="hljs-number">456</span>,
+    <span class="hljs-attr">"first_name"</span>: <span class="hljs-string">"John"</span>,
+    <span class="hljs-attr">"last_name"</span>: <span class="hljs-string">"Doe"</span>,
+    <span class="hljs-attr">"email"</span>: <span class="hljs-string">"john.doe@domain.com"</span>,
+    <span class="hljs-attr">"mobile_number"</span>: <span class="hljs-string">"+918987678732"</span>,
+    <span class="hljs-attr">"admin_id"</span>: <span class="hljs-number">123</span>,
+    <span class="hljs-attr">"role"</span>: <span class="hljs-string">"cashier"</span>,
+    <span class="hljs-attr">"paytm_credentials"</span>: {
+        <span class="hljs-attr">"merchant_id"</span>: <span class="hljs-string">"LUfX+OlJ0co7QGB5..."</span>,
+        <span class="hljs-attr">"merchant_key"</span>: <span class="hljs-string">"NlAg+8Jwt3RtDrPDo..."</span>
+    },
+    <span class="hljs-attr">"currency"</span>: <span class="hljs-string">"USD"</span>,
+    <span class="hljs-attr">"currency_symbol"</span>: <span class="hljs-string">"$"</span>,
+    <span class="hljs-attr">"access_token"</span>: <span class="hljs-string">"eyJhbGciOiJIUzI1NiIsInR5..."</span>,
+    <span class="hljs-attr">"refresh_token"</span>: <span class="hljs-string">"eyJhbGciOiJIUzI1NiIsInR5..."</span>
+}
+</code></pre>
+        </div>
+    </div>
+
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>

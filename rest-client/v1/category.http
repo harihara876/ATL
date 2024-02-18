@@ -1,0 +1,56 @@
+### Get all categories.
+GET {{host}}/api/api/Categories
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzMzMTk1ODQsImp0aSI6Imp1QUpBWFB6SDduZklybGo2YjdGQVE9PSIsImlzcyI6InBsYXQ0bS5sb2NhbCIsIm5iZiI6MTYzMzMxOTU4NCwiZXhwIjoxNjMzMzIxMzg0LCJ0eXBlIjoiYWNjZXNzIiwiZGF0YSI6eyJpZCI6IjMxIiwibmFtZSI6IkV2YSIsImVtYWlsIjoiZXZhQHQzc3RvcmVzLmNvbSIsInN0b3JlX2FkbWluX2lkIjoiMjYiLCJ0eXBlIjoiRGV2aWNlVXNlciJ9fQ.0qzyN-xo89FavudL0veg2ajwS7x8FPMBkmAzTAo7pJATQW1Lv9oj71Hp2yy1py3EZNAjCT7LqWxGeWhVwAtwJw
+
+
+
+### Get all subcategories.
+GET {{host}}/api/api/SubCategories
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MjYyNTAzNDMsImp0aSI6IlBSMmdwaTNEZ3NkQVFMbm5mWnF3XC9nPT0iLCJpc3MiOiJkZXYucGxhdDRtaW5jLmNvbSIsIm5iZiI6MTYyNjI1MDM0MywiZXhwIjoxNjI2MjUyMTQzLCJ0eXBlIjoiYWNjZXNzIiwiZGF0YSI6eyJpZCI6IjI2IiwibmFtZSI6IlN0YW5kYXJkIExpcXVvciIsImVtYWlsIjoic3RhbmRhcmRsaXF1b3JAZ21haWwuY29tIiwic3RvcmVfYWRtaW5faWQiOiIyNiIsInR5cGUiOiJzdG9yZWFkbWluIn19.CV1rq0E42sB4ccx2VjgA3aWNJrDoUYjagO3-HKox4UeFrANGSsZoz3zw0VJesCeQTP0zkQ21OsZrf_l0cwhBcg
+
+
+
+### Get all subsubcategories.
+GET {{host}}/api/api/SubSubCategories
+
+
+
+### Get all store categories.
+GET {{host}}/api/api/storecategories
+Content-Type: application/json
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 82943791-7dcd-4f28-bb41-74e2399ff790
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzQyNzcyMjEsImp0aSI6ImhhTTJVV3VBeGhrdlwvV0VHSWhTUld3PT0iLCJpc3MiOiJwbGF0NG0ubG9jYWwiLCJuYmYiOjE2MzQyNzcyMjEsImV4cCI6MTYzNDI3OTAyMSwidHlwZSI6ImFjY2VzcyIsImRhdGEiOnsiaWQiOiIzMyIsIm5hbWUiOiJMYWtlIFZpc3RhICIsImVtYWlsIjoibGFrZXZpc3RhbGlxdW9yc0B0M3N0b3Jlcy5jb20iLCJzdG9yZV9hZG1pbl9pZCI6IjMzIiwidHlwZSI6InN0b3JlYWRtaW4iLCJyZWdpc3RlcmVkX2FwcCI6ImNvbS5wbGF0NG1pbmMubXlzdG9yZSJ9fQ.HCnuyYawCMt78QEUJavpejo_DTCgXjrctlQrq3uPFiWaR9NpbfeMcoe4BbOxCJKoa8GfT8tAxlFAYri85mYWDQ
+
+{
+    "storeid": 26
+}
+
+
+
+### Get all store subcategories.
+GET {{host}}/api/api/storesubcategories
+Content-Type: application/json
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 82943791-7dcd-4f28-bb41-74e2399ff790
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzQyNzcyMjEsImp0aSI6ImhhTTJVV3VBeGhrdlwvV0VHSWhTUld3PT0iLCJpc3MiOiJwbGF0NG0ubG9jYWwiLCJuYmYiOjE2MzQyNzcyMjEsImV4cCI6MTYzNDI3OTAyMSwidHlwZSI6ImFjY2VzcyIsImRhdGEiOnsiaWQiOiIzMyIsIm5hbWUiOiJMYWtlIFZpc3RhICIsImVtYWlsIjoibGFrZXZpc3RhbGlxdW9yc0B0M3N0b3Jlcy5jb20iLCJzdG9yZV9hZG1pbl9pZCI6IjMzIiwidHlwZSI6InN0b3JlYWRtaW4iLCJyZWdpc3RlcmVkX2FwcCI6ImNvbS5wbGF0NG1pbmMubXlzdG9yZSJ9fQ.HCnuyYawCMt78QEUJavpejo_DTCgXjrctlQrq3uPFiWaR9NpbfeMcoe4BbOxCJKoa8GfT8tAxlFAYri85mYWDQ
+
+{
+    "storeid": 26
+}
+
+
+
+### Get all store sub-subcategories.
+POST {{host}}/api/api/storesubsubcategories
+Content-Type: application/json
+
+{
+    "storeid": 26
+}

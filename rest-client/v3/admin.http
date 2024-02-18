@@ -1,0 +1,123 @@
+### Create admin.
+POST {{host}}/api/v3/admin/create
+Content-Type: application/json
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 93db3c71-979f-4181-b7ea-b8fdf93b0754
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+
+{
+    "first_name": "John",
+    "last_name": "Doe",
+    "email": "john.doe@domain.com",
+    "password": "J0hnDoe@123",
+    "mobile_number": "+918987678732",
+    "store_type": "LLC",
+    "store_name": "Everest Supermarket",
+    "store_address": "1-234, Patrika Nagar, HITEC City",
+    "store_city": "Hyderabad",
+    "store_zip": "500082",
+    "store_country": "India"
+}
+
+
+
+### Admin profile.
+GET {{host}}/api/v3/admin
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 93db3c71-979f-4181-b7ea-b8fdf93b0754
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzQ5MDY5OTUsImp0aSI6IjA2MW05SkFlZTROM05tUGJ5c1VSWVE9PSIsImlzcyI6InBsYXQ0bS5sb2NhbCIsIm5iZiI6MTYzNDkwNjk5NSwiZXhwIjoxNjM0OTA4Nzk1LCJ0eXBlIjoiYWNjZXNzIiwiZGF0YSI6eyJpZCI6IjEwMyIsIm5hbWUiOiJKb2huIERvZSIsImVtYWlsIjoiam9obi5kb2VAZG9tYWluLmNvbSIsInN0b3JlX2FkbWluX2lkIjoiMTAzIiwidHlwZSI6InN0b3JlYWRtaW4iLCJyZWdpc3RlcmVkX2FwcCI6ImNvbS5wbGF0NG1pbmMubXlzdG9yZSJ9fQ.4i3ToKaTyRTPJSXz5KDF_H-x5Y7exm9KJKGFwLUrgYN2Yuw4KCp3N3Zmz8f6ej2hVSp_WSqDqD4wMKe01xynuQ
+
+
+
+### Update admin.
+PATCH {{host}}/api/v3/admin/update
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 93db3c71-979f-4181-b7ea-b8fdf93b0754
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzQ5MTY5NzgsImp0aSI6IlZORFd0ekpyU2FUdTVRVm9rZlFxb3c9PSIsImlzcyI6InBsYXQ0bS5sb2NhbCIsIm5iZiI6MTYzNDkxNjk3OCwiZXhwIjoxNjM0OTE4Nzc4LCJ0eXBlIjoiYWNjZXNzIiwiZGF0YSI6eyJpZCI6IjEwMyIsIm5hbWUiOiJKb2hubnkgRG9lIiwiZW1haWwiOiJqb2huLmRvZUBkb21haW4uY29tIiwic3RvcmVfYWRtaW5faWQiOiIxMDMiLCJ0eXBlIjoic3RvcmVhZG1pbiIsInJlZ2lzdGVyZWRfYXBwIjoiY29tLnBsYXQ0bWluYy5teXN0b3JlIn19.Tw6EIq3Jp61yibAqVJmyctPst_9exWvQUMl2Y6wmKw9jwfqUHaYxtRc6kjMmRLljX-3NswjZs5FCULq9ftvEPw
+
+{
+    "first_name": "John"
+}
+
+
+
+### Update Paytm credentails.
+POST {{host}}/api/v3/admin/paytm-credentials/update
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 93db3c71-979f-4181-b7ea-b8fdf93b0754
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzQ5MTY5NzgsImp0aSI6IlZORFd0ekpyU2FUdTVRVm9rZlFxb3c9PSIsImlzcyI6InBsYXQ0bS5sb2NhbCIsIm5iZiI6MTYzNDkxNjk3OCwiZXhwIjoxNjM0OTE4Nzc4LCJ0eXBlIjoiYWNjZXNzIiwiZGF0YSI6eyJpZCI6IjEwMyIsIm5hbWUiOiJKb2hubnkgRG9lIiwiZW1haWwiOiJqb2huLmRvZUBkb21haW4uY29tIiwic3RvcmVfYWRtaW5faWQiOiIxMDMiLCJ0eXBlIjoic3RvcmVhZG1pbiIsInJlZ2lzdGVyZWRfYXBwIjoiY29tLnBsYXQ0bWluYy5teXN0b3JlIn19.Tw6EIq3Jp61yibAqVJmyctPst_9exWvQUMl2Y6wmKw9jwfqUHaYxtRc6kjMmRLljX-3NswjZs5FCULq9ftvEPw
+
+{
+    "mid": "owEsZy7582422735324265",
+    "mkey": "jgdlsyfgvblcagliugbva"
+}
+
+
+
+### Change password.
+POST {{host}}/api/v3/admin/password/change
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 93db3c71-979f-4181-b7ea-b8fdf93b0754
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzQ5MTY5NzgsImp0aSI6IlZORFd0ekpyU2FUdTVRVm9rZlFxb3c9PSIsImlzcyI6InBsYXQ0bS5sb2NhbCIsIm5iZiI6MTYzNDkxNjk3OCwiZXhwIjoxNjM0OTE4Nzc4LCJ0eXBlIjoiYWNjZXNzIiwiZGF0YSI6eyJpZCI6IjEwMyIsIm5hbWUiOiJKb2hubnkgRG9lIiwiZW1haWwiOiJqb2huLmRvZUBkb21haW4uY29tIiwic3RvcmVfYWRtaW5faWQiOiIxMDMiLCJ0eXBlIjoic3RvcmVhZG1pbiIsInJlZ2lzdGVyZWRfYXBwIjoiY29tLnBsYXQ0bWluYy5teXN0b3JlIn19.Tw6EIq3Jp61yibAqVJmyctPst_9exWvQUMl2Y6wmKw9jwfqUHaYxtRc6kjMmRLljX-3NswjZs5FCULq9ftvEPw
+
+{
+    "password": "J0hnDoe@123",
+    "new_password": "JameD0e@456"
+}
+
+
+
+### Password reset request.
+POST {{host}}/api/v3/admin/password/reset/request
+Content-Type: application/json
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 93db3c71-979f-4181-b7ea-b8fdf93b0754
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+
+{
+    "email": "john.doe@domain.com"
+}
+
+
+
+### Password reset redeem.
+POST {{host}}/api/v3/admin/password/reset/redeem
+Content-Type: application/json
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 825126664d339421
+X-Plat4m-App-Device: xiaomiRedmi Note 5
+X-Plat4m-App-Version: 1.91.01
+X-Plat4m-App-Platform: 8.1.0
+
+{
+    "email": "lakevistaliquors@t3stores.com",
+    "otp": "3456",
+    "password": "12345"
+}
+
+
+
+### List of cashiers created by admin.
+GET {{host}}/api/v3/admin/cashiers
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 93db3c71-979f-4181-b7ea-b8fdf93b0754
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzQ5MTg4NTUsImp0aSI6IkJ6ZmxjR1ArVFFFZlNXblZlcUxPN0E9PSIsImlzcyI6InBsYXQ0bS5sb2NhbCIsIm5iZiI6MTYzNDkxODg1NSwiZXhwIjoxNjM0OTIwNjU1LCJ0eXBlIjoiYWNjZXNzIiwiZGF0YSI6eyJpZCI6IjEwMyIsIm5hbWUiOiJKb2huIERvZSIsImVtYWlsIjoiam9obi5kb2VAZG9tYWluLmNvbSIsInN0b3JlX2FkbWluX2lkIjoiMTAzIiwidHlwZSI6InN0b3JlYWRtaW4iLCJyZWdpc3RlcmVkX2FwcCI6ImNvbS5wbGF0NG1pbmMubXlzdG9yZSJ9fQ.G29GMUXRoGmAfiBf_X3CQPeOS5MW3xpSLzgD8ZwSkffOHUG3qrKskK71uWN3O4tRvlC_3lun3K4LBXQ3dYNR_A

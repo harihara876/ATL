@@ -1,0 +1,9 @@
+### Send OTP.
+POST {{host}}/api/api/payment/store-paytm-credentials
+Content-Type: application/json
+
+{
+    "store_id": 26,
+    "mid": "TEST_MID",
+    "mkey": "TEST_MKEY"
+}

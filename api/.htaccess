@@ -1,0 +1,102 @@
+# Turn rewrite engine on
+Options +FollowSymlinks
+RewriteEngine on
+SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
+
+
+# Users
+
+# Done
+RewriteRule ^api/authenticate-device-user$ v1/authenticate-device-user.php [nc,qsa]
+RewriteRule ^api/send-otp$ v1/send-otp.php [nc,qsa]
+RewriteRule ^api/reset-password$ v1/reset-password.php [nc,qsa]
+# RewriteRule ^api/create-device-user$ v1/create-device-user.php [nc,qsa]
+# RewriteRule ^api/create-admin-user$ v1/create-admin-user.php [nc,qsa]
+RewriteRule ^api/update-device-user$ v1/update-device-user.php [nc,qsa]
+RewriteRule ^api/update-admin-user$ v1/update-admin-user.php [nc,qsa]
+RewriteRule ^api/get-device-users$ v1/get-all-device-users.php [nc,qsa]
+
+# Reports
+RewriteRule ^api/order-summary$ v1/order-summary.php [nc,qsa]
+RewriteRule ^api/transactions$ v1/transactions.php [nc,qsa]
+RewriteRule ^api/view-transaction$ v1/view-transaction.php [nc,qsa]
+RewriteRule ^api/reports/product-sales$ v1/product-sales.php [nc,qsa]
+
+# Payments
+RewriteRule ^api/payment/store-paytm-credentials$ v1/store-paytm-credentials.php [nc,qsa]
+
+RewriteRule ^api/upload-product-image$ v1/upload-product-image.php [nc,qsa]
+
+######################
+### Authentication ###
+######################
+
+RewriteCond %{REQUEST_METHOD} POST
+RewriteRule ^api/v1/device-user/auth/login$ v1/authenticate-device-user.php [L,QSA]
+
+RewriteCond %{REQUEST_METHOD} GET
+RewriteRule ^api/v1/device-user/auth/refresh$ v1/refresh-tokens.php [L,QSA]
+
+#############################
+#####      V2 APIs      #####
+#############################
+
+# Users
+
+RewriteCond %{REQUEST_METHOD} POST
+RewriteRule ^v2/user/auth$ v2/authenticate-device-user.php [NC,QSA]
+
+RewriteCond %{REQUEST_METHOD} POST
+RewriteRule ^v2/admin/create$ v2/create-admin-user.php [NC,QSA]
+
+RewriteCond %{REQUEST_METHOD} POST
+RewriteRule ^v2/device-user/create$ v2/create-device-user.php [NC,QSA]
+
+# Store
+RewriteRule ^api/storeproducts$ v1/store-product.php [nc,qsa]
+RewriteRule ^api/storecategories$ v1/store-category.php [nc,qsa]
+RewriteRule ^api/storesubcategories$ v1/store-subcategory.php [nc,qsa]
+RewriteRule ^api/storesubsubcategories$ v1/store-sub-subcategory.php [nc,qsa]
+
+# Pending
+
+# Universal
+RewriteRule ^api/Products$ v1/product.php [nc,qsa]
+RewriteRule ^api/Categories$ v1/category.php [nc,qsa]
+RewriteRule ^api/SubCategories$ v1/subcategory.php [nc,qsa]
+RewriteRule ^api/SubSubCategories$ v1/sub-subcategory.php [nc,qsa]
+
+RewriteRule ^api/create-store-product$ v1/create
+
+
+RewriteRule ^api/create-order$ v1/create-order.php [nc,qsa]
+RewriteRule ^api/update-order-status$ v1/update-order-status.php [nc,qsa]
+RewriteRule ^api/create-temp-product2$ v1/create-temp-product2.php [nc,qsa]
+RewriteRule ^api/create-temp-product$ v1/create-temp-product.php [nc,qsa]
+RewriteRule ^api/getproduct$ v1/get-product.php [nc,qsa]
+RewriteRule ^api/get-temp-products$ v1/get-temp-products.php [nc,qsa]
+RewriteRule ^api/update-regular-price$ v1/update-regular-price.php [nc,qsa]
+RewriteRule ^api/update-store-product$ v1/update-store-product.php [nc,qsa]
+RewriteRule ^api/product-price-range$ v1/product-price-range.php [nc,qsa]
+RewriteRule ^api/checkUpc$ v1/check-upc.php [nc,qsa]
+
+
+# NOT USED. Better remove it.
+# RewriteRule ^api/order-new-price$ v1/order-new-price.php [nc,qsa]
+
+
+RewriteCond %{REQUEST_METHOD} POST
+RewriteRule ^api/v1/store/(\d+)/product$ v1/create-store-product.php?store_id=$1 [L,QSA]
+
+
+
+
+
+
+# Redirect to 404 for unknown URLs.
+# RewriteEngine On
+# RewriteRule   ^([a-zA-Z-]+)$	$1.html    [L,NC]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule . index.php [QSA,L]

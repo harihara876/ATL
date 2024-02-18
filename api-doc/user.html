@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User | Plat4m API Documentation</title>
+    <link rel="stylesheet" href="./assets/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/api-doc/index.html">Plat4m API Documentation</a></li>
+                <li class="breadcrumb-item active" aria-current="page">User</li>
+            </ol>
+        </nav>
+        <div>
+            <h1 id="user">User</h1>
+            <p>User refers to Admin or Cashier. See <code>Admin</code> or <code>Cashier</code> pages for more
+                information.</p>
+            <hr>
+            <h2 id="-reset-password-request-"><em>Reset Password Request</em></h2>
+            <h3 id="-post-api-v3-user-password-reset-request-"><strong>POST</strong>
+                <code>/api/v3/user/password/reset/request</code></h3>
+            <p>Password reset request for Admin or Cashier.</p>
+            <p>An OTP will be sent to the requested email.</p>
+            <h4 id="request">Request</h4>
+            <pre><code>{
+    <span class="hljs-attr">"email"</span>: <span class="hljs-string">"john.doe@domain.com"</span>
+}
+</code></pre>
+            <h4 id="response">Response</h4>
+            <pre><code>{
+    <span class="hljs-attr">"message"</span>: <span class="hljs-string">"An OTP has sent to the registered email. Reset your password using the OTP."</span>
+}
+</code></pre>
+            <hr>
+            <h2 id="-reset-password-"><em>Reset Password</em></h2>
+            <h3 id="-post-api-v3-user-password-reset-"><strong>POST</strong> <code>/api/v3/user/password/reset</code>
+            </h3>
+            <p>Reset password uisng OTP.</p>
+            <h4 id="request">Request</h4>
+            <pre><code>{
+    <span class="hljs-attr">"otp"</span>: <span class="hljs-string">"2312"</span>,
+    <span class="hljs-attr">"password"</span>: <span class="hljs-string">"new password"</span>
+}
+</code></pre>
+            <h4 id="response">Response</h4>
+            <pre><code>{
+    <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Password updated successfully"</span>
+}
+</code></pre>
+        </div>
+    </div>
+
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>

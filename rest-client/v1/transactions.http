@@ -1,0 +1,23 @@
+### Order ID.
+@orderID = 5733010707210033
+
+
+
+### List transactions.
+POST {{host}}/api/api/transactions
+Content-Type: application/json
+
+{
+    "storeid": 26,
+    "from_date": "05/15/2020",
+    "from_time": "12:00 AM",
+    "to_date": "05/15/2021",
+    "to_time": "11:59 PM",
+    "tzID": "Asia/Kolkata"
+}
+
+
+
+### View transaction.
+GET {{host}}/api/api/view-transaction?order_id={{orderID}}
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MjU3MjMwMzMsImp0aSI6InBZcFBkTlBXYTIrYWl3MlkwakgxU1E9PSIsImlzcyI6ImRldi5wbGF0NG1pbmMuY29tIiwibmJmIjoxNjI1NzIzMDMzLCJleHAiOjE2MjU3MjQ4MzMsImRhdGEiOnsiaWQiOiIzMSIsIm5hbWUiOiJFdmEiLCJlbWFpbCI6ImV2YUB0M3N0b3Jlcy5jb20iLCJzdG9yZV9hZG1pbl9pZCI6IjI2IiwidHlwZSI6IkRldmljZVVzZXIifX0.er_7zct2Fr8zThGSKNwVmoMWRKykpnWjPyYYVL7HoCGI9ARa2cKQT2yDMlax_aDWEFLdN56KKvEGBtMtPC3gfw

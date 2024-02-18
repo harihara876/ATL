@@ -1,0 +1,17 @@
+POST {{host}}/api/api/create-order
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MjU3MjQ0NTYsImp0aSI6Ik1zdFB2Q1N2RUMzdVRpQ2dPamJiaHc9PSIsImlzcyI6ImRldi5wbGF0NG1pbmMuY29tIiwibmJmIjoxNjI1NzI0NDU2LCJleHAiOjE2MjU3MjYyNTYsImRhdGEiOnsiaWQiOiIzMSIsIm5hbWUiOiJFdmEiLCJlbWFpbCI6ImV2YUB0M3N0b3Jlcy5jb20iLCJzdG9yZV9hZG1pbl9pZCI6IjI2IiwidHlwZSI6IkRldmljZVVzZXIifX0.B9TYUz6gHO2XsbBUcxIJM1tw6sWhQGvOPU3nZ_qrl0BGJJ6pG_gSObyQTtPsFVlSuoe0PLSXg6-Ovt-emYfXww
+
+[{"order_id":"3247100707210033","total_amount":"21.53","uid":33,"payment_mode":"cash","latitude":"37.397672","longitude":"-121.9953998","localtime":"10:47:14 AM","products":[{"product_id":1000370007,"quantity":"1","price":"6.99","tax":"0.09","Special_Value":"0"},{"product_id":1000370004,"quantity":"1","price":"9","tax":"0.09","Special_Value":"0"},{"product_id":1000374651,"quantity":"1","price":"2","tax":"0","Special_Value":"0"},{"product_id":1000374650,"quantity":"1","price":"2","tax":"0","Special_Value":"0"}]}]
+
+
+
+### Update order status.
+POST {{host}}/api/api/update-order-status
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MjYzMjUwOTAsImp0aSI6ImRqR0hDN2RiNXhjdWo4amRGWm5QeFE9PSIsImlzcyI6ImRldi5wbGF0NG1pbmMuY29tIiwibmJmIjoxNjI2MzI1MDkwLCJleHAiOjE2MjYzMjY4OTAsInR5cGUiOiJhY2Nlc3MiLCJkYXRhIjp7ImlkIjoiMjYiLCJuYW1lIjoiU3RhbmRhcmQgTGlxdW9yIiwiZW1haWwiOiJzdGFuZGFyZGxpcXVvckBnbWFpbC5jb20iLCJzdG9yZV9hZG1pbl9pZCI6IjI2IiwidHlwZSI6InN0b3JlYWRtaW4ifX0.Gh6QL2wwOtE7AJgdGr8QSu0qhtdG6FRDcsPIiKaAjro1dQq3Ag2cG_UGYEbAsSDqjRHJGVKG5PB_AXeAmvvZsg
+
+{
+    "order_id": "450816201119001",
+    "status": "Cancel"
+}

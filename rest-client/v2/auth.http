@@ -1,0 +1,43 @@
+### Authenticate user.
+# @name loginRequest
+POST {{host}}/api/v2/user/auth
+Content-Type: application/x-www-form-urlencoded
+
+email=eva@t3stores.com
+&password=1234
+
+###
+# email=standardliquor@gmail.com
+# &password=1234
+# email=lakevistaliquors@t3stores.com
+# &password=1133
+# email=eva@t3stores.com
+# &password=1234
+
+
+
+### Refresh tokens.
+GET  {{host}}/api/api/v1/device-user/auth/refresh
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MjY2ODc2NzcsImp0aSI6IkN1cklZQllDTGRHREpYUVY2VXdOUEE9PSIsImlzcyI6InBsYXQ0bS5sb2NhbCIsIm5iZiI6MTYyNjY4NzY3NywiZXhwIjoxNjI2ODYwNDc3LCJ0eXBlIjoicmVmcmVzaCIsImRhdGEiOnsiaWQiOiIzMyIsIm5hbWUiOiJMYWtlIFZpc3RhICIsImVtYWlsIjoibGFrZXZpc3RhbGlxdW9yc0B0M3N0b3Jlcy5jb20iLCJzdG9yZV9hZG1pbl9pZCI6IjMzIiwidHlwZSI6InN0b3JlYWRtaW4ifX0.ipdYl1J0ITXJ8Z9OBAlwxjqnd-8rfepGRjR33xPRh8RL4E9yEz4WU80lpzhol-wntTxhz6yIAfNfKGVrrWMQ9g
+
+
+
+### Send OTP.
+POST {{host}}/api/api/send-otp
+Content-Type: application/json
+
+{
+    "email": "kpteja030393@gmail.com"
+}
+
+
+
+### Reset Password.
+POST {{host}}/api/api/reset-password
+Content-Type: application/json
+
+{
+    "email": "kpteja030393@gmail.com",
+    "otp": 2837,
+    "password": "12345678"
+}

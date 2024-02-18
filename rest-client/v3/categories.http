@@ -1,0 +1,30 @@
+### List of categories.
+GET {{host}}/api/v3/store/categories
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 93db3c71-979f-4181-b7ea-b8fdf93b0754
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzYzNTcxNDAsImp0aSI6Imo1YkVtM1d0cGV0WGpoNmhJYXdMZVE9PSIsImlzcyI6InBsYXQ0bS5sb2NhbCIsIm5iZiI6MTYzNjM1NzE0MCwiZXhwIjoxNjM2MzU4OTQwLCJ0eXBlIjoiYWNjZXNzIiwiZGF0YSI6eyJpZCI6IjMzIiwibmFtZSI6Ikxha2UgVmlzdGEgIiwiZW1haWwiOiJsYWtldmlzdGFsaXF1b3JzQHQzc3RvcmVzLmNvbSIsInN0b3JlX2FkbWluX2lkIjoiMzMiLCJ0eXBlIjoic3RvcmVhZG1pbiIsInJlZ2lzdGVyZWRfYXBwIjoiY29tLnBsYXQ0bWluYy5teXN0b3JlIn19.UcSDPjyVgFjWD8JGOTkuGhUj8cRM7h511q9fuASX2Z30Jr7le57YRua_O1DmMTybWXWcih36jrlaGe9H1AhSMg
+
+
+
+### List of subcategories.
+GET {{host}}/api/v3/store/subcategories
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 93db3c71-979f-4181-b7ea-b8fdf93b0754
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzYzNTcxNDAsImp0aSI6Imo1YkVtM1d0cGV0WGpoNmhJYXdMZVE9PSIsImlzcyI6InBsYXQ0bS5sb2NhbCIsIm5iZiI6MTYzNjM1NzE0MCwiZXhwIjoxNjM2MzU4OTQwLCJ0eXBlIjoiYWNjZXNzIiwiZGF0YSI6eyJpZCI6IjMzIiwibmFtZSI6Ikxha2UgVmlzdGEgIiwiZW1haWwiOiJsYWtldmlzdGFsaXF1b3JzQHQzc3RvcmVzLmNvbSIsInN0b3JlX2FkbWluX2lkIjoiMzMiLCJ0eXBlIjoic3RvcmVhZG1pbiIsInJlZ2lzdGVyZWRfYXBwIjoiY29tLnBsYXQ0bWluYy5teXN0b3JlIn19.UcSDPjyVgFjWD8JGOTkuGhUj8cRM7h511q9fuASX2Z30Jr7le57YRua_O1DmMTybWXWcih36jrlaGe9H1AhSMg
+
+
+
+### List of sub-subcategories.
+GET {{host}}/api/v3/store/subsubcategories
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 93db3c71-979f-4181-b7ea-b8fdf93b0754
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzYzNTcxNDAsImp0aSI6Imo1YkVtM1d0cGV0WGpoNmhJYXdMZVE9PSIsImlzcyI6InBsYXQ0bS5sb2NhbCIsIm5iZiI6MTYzNjM1NzE0MCwiZXhwIjoxNjM2MzU4OTQwLCJ0eXBlIjoiYWNjZXNzIiwiZGF0YSI6eyJpZCI6IjMzIiwibmFtZSI6Ikxha2UgVmlzdGEgIiwiZW1haWwiOiJsYWtldmlzdGFsaXF1b3JzQHQzc3RvcmVzLmNvbSIsInN0b3JlX2FkbWluX2lkIjoiMzMiLCJ0eXBlIjoic3RvcmVhZG1pbiIsInJlZ2lzdGVyZWRfYXBwIjoiY29tLnBsYXQ0bWluYy5teXN0b3JlIn19.UcSDPjyVgFjWD8JGOTkuGhUj8cRM7h511q9fuASX2Z30Jr7le57YRua_O1DmMTybWXWcih36jrlaGe9H1AhSMg

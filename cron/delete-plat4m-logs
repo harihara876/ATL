@@ -1,0 +1,7 @@
+# Set a cron in cron.daily to delete old log files (older than a week)
+# from /var/log/plat4m/logs directory.
+cat<<'EOF' > /etc/cron.daily/delete-plat4m-logs
+#!/bin/bash -e
+sudo /usr/bin/find /var/log/plat4m/logs -name "*.log" -type f -mtime +7 -delete
+EOF
+chmod 0755 /etc/cron.daily/delete-plat4m-logs

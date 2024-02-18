@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports | Plat4m API Documentation</title>
+    <link rel="stylesheet" href="./assets/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/api-doc/index.html">Plat4m API Documentation</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Reports</li>
+            </ol>
+        </nav>
+        <div>
+            <h1 id="reports">Reports</h1>
+            <p>Reports generated from transactions.</p>
+            <p>Input parameters.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Attribute</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>from_date</code></td>
+                        <td>string</td>
+                        <td>From date in <code>MM/DD/YYYY</code> format. E.g. 05/14/2021</td>
+                    </tr>
+                    <tr>
+                        <td><code>from_time</code></td>
+                        <td>string</td>
+                        <td>From time in <code>HH:MM AM</code> format. E.g. 12:00 AM</td>
+                    </tr>
+                    <tr>
+                        <td><code>to_date</code></td>
+                        <td>string</td>
+                        <td>To date in <code>MM/DD/YYYY</code> format. E.g. 05/14/2021</td>
+                    </tr>
+                    <tr>
+                        <td><code>to_time</code></td>
+                        <td>string</td>
+                        <td>To time in <code>HH:MM AM</code> format. E.g. 12:00 AM</td>
+                    </tr>
+                    <tr>
+                        <td><code>tzID</code></td>
+                        <td>string</td>
+                        <td>Timezone ID. E.g. America/Los_Angeles</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Output parameters for <strong>orders summary</strong>.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Attribute</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>orders_completed</code></td>
+                        <td>int</td>
+                        <td>Number of orders completed.</td>
+                    </tr>
+                    <tr>
+                        <td><code>total_selling_price</code></td>
+                        <td>float</td>
+                        <td>Total selling price.</td>
+                    </tr>
+                    <tr>
+                        <td><code>total_tax</code></td>
+                        <td>float</td>
+                        <td>Total tax.</td>
+                    </tr>
+                    <tr>
+                        <td><code>total_revenue</code></td>
+                        <td>float</td>
+                        <td>Total revenue.</td>
+                    </tr>
+                    <tr>
+                        <td><code>total_revenue_cash</code></td>
+                        <td>float</td>
+                        <td>Total revenue from orders paid via cash.</td>
+                    </tr>
+                    <tr>
+                        <td><code>total_revenue_card</code></td>
+                        <td>float</td>
+                        <td>Total revenue from orders paid via card.</td>
+                    </tr>
+                    <tr>
+                        <td><code>total_lottery_sales</code></td>
+                        <td>float</td>
+                        <td>Total sales of Lottery.</td>
+                    </tr>
+                    <tr>
+                        <td><code>total_scratchers_sales</code></td>
+                        <td>float</td>
+                        <td>Total sales of Scratchers.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Output parameters for <strong>product sales</strong>.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Attribute</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>product_name</code></td>
+                        <td>string</td>
+                        <td>Product name.</td>
+                    </tr>
+                    <tr>
+                        <td><code>quantity</code></td>
+                        <td>int</td>
+                        <td>Total number of products sold.</td>
+                    </tr>
+                    <tr>
+                        <td><code>selling_price</code></td>
+                        <td>float</td>
+                        <td>Total selling price.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Output parameters for <strong>transactions</strong>.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Attribute</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>id</code></td>
+                        <td>int</td>
+                        <td>Order ID.</td>
+                    </tr>
+                    <tr>
+                        <td><code>order_uuid</code></td>
+                        <td>string</td>
+                        <td>Order UUID.</td>
+                    </tr>
+                    <tr>
+                        <td><code>amount</code></td>
+                        <td>float</td>
+                        <td>Amount.</td>
+                    </tr>
+                    <tr>
+                        <td><code>status</code></td>
+                        <td>string</td>
+                        <td>Order status. E.g. Complete</td>
+                    </tr>
+                    <tr>
+                        <td><code>tms</code></td>
+                        <td>string</td>
+                        <td>Timestamp.</td>
+                    </tr>
+                    <tr>
+                        <td><code>user_id</code></td>
+                        <td>int</td>
+                        <td>User (admin or cashier) ID.</td>
+                    </tr>
+                    <tr>
+                        <td><code>payment_mode</code></td>
+                        <td>string</td>
+                        <td>Payment mode. Cash or card.</td>
+                    </tr>
+                    <tr>
+                        <td><code>clerk</code></td>
+                        <td>string</td>
+                        <td>Clerk (admin or cashier) name.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <h2 id="-orders-summary-"><em>Orders summary</em></h2>
+            <h3 id="-post-api-v3-reports-orders-summary-"><strong>POST</strong>
+                <code>/api/v3/reports/orders-summary</code></h3>
+            <p>Summary of orders between a time period.</p>
+            <h4 id="request">Request</h4>
+            <pre><code>{
+    <span class="hljs-attr">"from_date"</span>: <span class="hljs-string">"05/14/2021"</span>,
+    <span class="hljs-attr">"from_time"</span>: <span class="hljs-string">"12:00 AM"</span>,
+    <span class="hljs-attr">"to_date"</span>: <span class="hljs-string">"05/16/2021"</span>,
+    <span class="hljs-attr">"to_time"</span>: <span class="hljs-string">"11:59 PM"</span>,
+    <span class="hljs-attr">"tzID"</span>: <span class="hljs-string">"America/Los_Angeles"</span>
+}
+</code></pre>
+            <h4 id="response">Response</h4>
+            <pre><code>{
+    <span class="hljs-attr">"order_summary"</span>: {
+        <span class="hljs-attr">"orders_completed"</span>: <span class="hljs-number">743</span>,
+        <span class="hljs-attr">"total_selling_price"</span>: <span class="hljs-string">"14,283.76"</span>,
+        <span class="hljs-attr">"total_tax"</span>: <span class="hljs-string">"771.35"</span>,
+        <span class="hljs-attr">"total_revenue"</span>: <span class="hljs-string">"15,394.61"</span>,
+        <span class="hljs-attr">"total_revenue_cash"</span>: <span class="hljs-string">"6,777.85"</span>,
+        <span class="hljs-attr">"total_revenue_card"</span>: <span class="hljs-string">"8,616.76"</span>,
+        <span class="hljs-attr">"total_lottery_sales"</span>: <span class="hljs-string">"1,743.00"</span>,
+        <span class="hljs-attr">"total_scratchers_sales"</span>: <span class="hljs-string">"1,491.00"</span>
+    }
+}
+</code></pre>
+            <hr>
+            <h2 id="-product-sales-"><em>Product sales</em></h2>
+            <h3 id="-post-api-v3-reports-product-sales-"><strong>POST</strong>
+                <code>/api/v3/reports/product-sales</code></h3>
+            <p>Product sales between a time period.</p>
+            <h4 id="request">Request</h4>
+            <pre><code>{
+    <span class="hljs-attr">"from_date"</span>: <span class="hljs-string">"05/14/2021"</span>,
+    <span class="hljs-attr">"from_time"</span>: <span class="hljs-string">"12:00 AM"</span>,
+    <span class="hljs-attr">"to_date"</span>: <span class="hljs-string">"05/16/2021"</span>,
+    <span class="hljs-attr">"to_time"</span>: <span class="hljs-string">"11:59 PM"</span>,
+    <span class="hljs-attr">"tzID"</span>: <span class="hljs-string">"America/Los_Angeles"</span>
+}
+</code></pre>
+            <h4 id="response">Response</h4>
+            <pre><code>{
+    <span class="hljs-attr">"product_sales"</span>: [
+        {
+            <span class="hljs-attr">"product_name"</span>: <span class="hljs-string">"Lotto"</span>,
+            <span class="hljs-attr">"quantity"</span>: <span class="hljs-string">"843"</span>,
+            <span class="hljs-attr">"selling_price"</span>: <span class="hljs-string">"803.00"</span>
+        },
+        {
+            <span class="hljs-attr">"product_name"</span>: <span class="hljs-string">"Paper Bag"</span>,
+            <span class="hljs-attr">"quantity"</span>: <span class="hljs-string">"106"</span>,
+            <span class="hljs-attr">"selling_price"</span>: <span class="hljs-string">"24.25"</span>
+        },
+        {
+            <span class="hljs-attr">"product_name"</span>: <span class="hljs-string">"Unknown"</span>,
+            <span class="hljs-attr">"quantity"</span>: <span class="hljs-string">"56"</span>,
+            <span class="hljs-attr">"selling_price"</span>: <span class="hljs-string">"580.67"</span>
+        },
+        {
+            <span class="hljs-attr">"product_name"</span>: <span class="hljs-string">"NONTAX"</span>,
+            <span class="hljs-attr">"quantity"</span>: <span class="hljs-string">"29"</span>,
+            <span class="hljs-attr">"selling_price"</span>: <span class="hljs-string">"512.58"</span>
+        }
+    ]
+}
+</code></pre>
+            <hr>
+            <h2 id="-transactions-"><em>Transactions</em></h2>
+            <h3 id="-post-api-v3-reports-transactions-"><strong>POST</strong> <code>/api/v3/reports/transactions</code>
+            </h3>
+            <p>Transactions between a time period.</p>
+            <h4 id="request">Request</h4>
+            <pre><code>{
+    <span class="hljs-attr">"from_date"</span>: <span class="hljs-string">"05/14/2021"</span>,
+    <span class="hljs-attr">"from_time"</span>: <span class="hljs-string">"12:00 AM"</span>,
+    <span class="hljs-attr">"to_date"</span>: <span class="hljs-string">"05/16/2021"</span>,
+    <span class="hljs-attr">"to_time"</span>: <span class="hljs-string">"11:59 PM"</span>,
+    <span class="hljs-attr">"tzID"</span>: <span class="hljs-string">"America/Los_Angeles"</span>
+}
+</code></pre>
+            <h4 id="response">Response</h4>
+            <pre><code>{
+    <span class="hljs-attr">"transaction_history"</span>: [
+        {
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">1234</span>,
+            <span class="hljs-attr">"order_uuid"</span>: <span class="hljs-string">"3705001405210031"</span>,
+            <span class="hljs-attr">"amount"</span>: <span class="hljs-number">0.25</span>,
+            <span class="hljs-attr">"status"</span>: <span class="hljs-string">"Complete"</span>,
+            <span class="hljs-attr">"tms"</span>: <span class="hljs-string">"2021-05-14 00:05:38"</span>,
+            <span class="hljs-attr">"user_id"</span>: <span class="hljs-number">31</span>,
+            <span class="hljs-attr">"payment_mode"</span>: <span class="hljs-string">"Cash"</span>,
+            <span class="hljs-attr">"clerk"</span>: <span class="hljs-string">"John Doe"</span>
+        },
+        {
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">2345</span>,
+            <span class="hljs-attr">"order_uuid"</span>: <span class="hljs-string">"3130081405210031"</span>,
+            <span class="hljs-attr">"amount"</span>: <span class="hljs-number">10.89</span>,
+            <span class="hljs-attr">"status"</span>: <span class="hljs-string">"Complete"</span>,
+            <span class="hljs-attr">"tms"</span>: <span class="hljs-string">"2021-05-14 08:35:42"</span>,
+            <span class="hljs-attr">"user_id"</span>: <span class="hljs-number">31</span>,
+            <span class="hljs-attr">"payment_mode"</span>: <span class="hljs-string">"Cash"</span>,
+            <span class="hljs-attr">"clerk"</span>: <span class="hljs-string">"John Doe"</span>
+        },
+        {
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">3456</span>,
+            <span class="hljs-attr">"order_uuid"</span>: <span class="hljs-string">"4835081405210031"</span>,
+            <span class="hljs-attr">"amount"</span>: <span class="hljs-number">2.76</span>,
+            <span class="hljs-attr">"status"</span>: <span class="hljs-string">"Complete"</span>,
+            <span class="hljs-attr">"tms"</span>: <span class="hljs-string">"2021-05-14 08:36:11"</span>,
+            <span class="hljs-attr">"user_id"</span>: <span class="hljs-number">31</span>,
+            <span class="hljs-attr">"payment_mode"</span>: <span class="hljs-string">"Card"</span>,
+            <span class="hljs-attr">"clerk"</span>: <span class="hljs-string">"John Doe"</span>
+        }
+    ]
+}
+</code></pre>
+        </div>
+    </div>
+
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>

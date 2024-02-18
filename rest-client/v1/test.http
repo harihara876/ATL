@@ -1,0 +1,10 @@
+GET {{host}}/api/v1/product/upc/12345
+
+
+
+### Authenticate user.
+POST {{host}}/api/api/v1/device-user/auth
+Content-Type: application/x-www-form-urlencoded
+
+email=eva@t3stores.com
+&password=1234

@@ -1,0 +1,104 @@
+### Authenticate user.
+# @name loginRequest
+POST {{host}}/api/api/authenticate-device-user
+Content-Type: application/x-www-form-urlencoded
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 82943791-7dcd-4f28-bb41-74e2399ff791
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+
+email=eva@t3stores.com
+&password=1234
+
+
+
+### Authenticate user.
+POST {{host}}/api/api/authenticate-device-user
+Content-Type: application/x-www-form-urlencoded
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 82943791-7dcd-4f28-bb41-74e2399ff790
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+
+email=lakevistaliquors@t3stores.com
+&password=1133
+
+###
+# email=standardliquor@gmail.com
+# &password=1234
+# email=lakevistaliquors@t3stores.com
+# &password=1133
+
+
+
+### Authenticate user.
+POST {{host}}/api/api/authenticate-device-user
+Content-Type: application/x-www-form-urlencoded
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 93db3c71-979f-4181-b7ea-b8fdf93b0754
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+
+email=kpteja030393333646@gmail.com
+&password=12345
+
+
+
+### Refresh tokens.
+GET  {{host}}/api/api/v1/device-user/auth/refresh
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 93db3c71-979f-4181-b7ea-b8fdf93b0754
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzQyMjkwMzEsImp0aSI6Imt3Y0wwY2syQVgzb2VWOG9uSHZYV2c9PSIsImlzcyI6InBsYXQ0bS5sb2NhbCIsIm5iZiI6MTYzNDIyOTAzMSwiZXhwIjoxNjM0NDAxODMxLCJ0eXBlIjoicmVmcmVzaCIsImRhdGEiOnsiaWQiOiIzMyIsIm5hbWUiOiJMYWtlIFZpc3RhICIsImVtYWlsIjoibGFrZXZpc3RhbGlxdW9yc0B0M3N0b3Jlcy5jb20iLCJzdG9yZV9hZG1pbl9pZCI6IjMzIiwidHlwZSI6InN0b3JlYWRtaW4iLCJyZWdpc3RlcmVkX2FwcCI6ImNvbS5wbGF0NG1pbmMubXlzdG9yZSJ9fQ.if4kfCXxPSS_X2nVxXmD9UAzz9uLKdLltvjgPNCF04chAwFQFb5ykpY-sEQC5AU_5_FoFWcjrKrBuvUlSSqWKQ
+
+
+### Send OTP.
+POST {{host}}/api/api/send-otp
+Content-Type: application/json
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 82943791-7dcd-4f28-bb41-74e2399ff790
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+
+{
+    "email": "kpteja030393@gmail.com"
+}
+
+
+
+### Reset Password.
+POST {{host}}/api/api/reset-password
+Content-Type: application/json
+
+{
+    "email": "kpteja030393@gmail.com",
+    "otp": 2837,
+    "password": "12345678"
+}
+
+
+
+### Test
+POST {{host}}/api/v1/auth/login
+Content-Type: application/x-www-form-urlencoded
+
+email=eva@t3stores.com
+&password=1234
+
+
+
+###
+GET {{host}}/api/v1/auth/logout
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 82943791-7dcd-4f28-bb41-74e2399ff790
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzQwOTc3ODQsImp0aSI6ImVORTAxUEVYVCt5Y0x2ZzJkc2REV3c9PSIsImlzcyI6InBsYXQ0bS5sb2NhbCIsIm5iZiI6MTYzNDA5Nzc4NCwiZXhwIjoxNjM0MDk5NTg0LCJ0eXBlIjoiYWNjZXNzIiwiZGF0YSI6eyJpZCI6IjMzIiwibmFtZSI6Ikxha2UgVmlzdGEgIiwiZW1haWwiOiJsYWtldmlzdGFsaXF1b3JzQHQzc3RvcmVzLmNvbSIsInN0b3JlX2FkbWluX2lkIjoiMzMiLCJ0eXBlIjoic3RvcmVhZG1pbiJ9fQ.wkA_ln5SDZhBVJ_EB41IwENrArX55juZGWAGdLU9xUu7TLdi7LAFbuAB6XsMSCj_w0stSm9aLjR2gcy_H7Lx9g
+

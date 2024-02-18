@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plat4m API Documentation</title>
+    <link rel="stylesheet" href="./assets/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <h1 id="-plat4m-api-documentation-"><strong>Plat4m API Documentation</strong></h1>
+            <p>List of APIs to interact with <strong>Plat4m</strong> server.</p>
+            <hr>
+            <h2 id="conventions">Conventions</h2>
+            <ul>
+                <li>All API calls are performed over HTTPS.</li>
+                <li>All calls require input of type <code>application/json</code>, unless otherwise indicated.</li>
+                <li>All calls return output of type <code>application/json</code>, unless otherwise indicated.</li>
+                <li>HTTP methods:<ul>
+                        <li><code>GET</code>: Get existing object<ul>
+                                <li>Input: None</li>
+                                <li>Output: Requested object in JSON format</li>
+                            </ul>
+                        </li>
+                        <li><code>PATCH</code>: Partial update<ul>
+                                <li>Input: Changed attributes of an existing object</li>
+                                <li>Output: Updated object in JSON format.</li>
+                            </ul>
+                        </li>
+                        <li><code>POST</code>: Create new object<ul>
+                                <li>Input: New object&#39;s attributes</li>
+                                <li>Output: Newly created object in JSON format.</li>
+                            </ul>
+                        </li>
+                        <li><code>DELETE</code>: Delete existing object<ul>
+                                <li>Input: None</li>
+                                <li>Output: None</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>JWTs are used for authentication.</li>
+                <li>Dates are in <code>YYYY-MM-DD HH:MM:SS</code> format.</li>
+            </ul>
+            <hr>
+            <h2 id="error-handling">Error Handling</h2>
+            <p>Errors are returned as JSON payload with respective HTTP status codes.
+                For example:</p>
+            <pre><code>{
+    <span class="hljs-attr">"error"</span>: {
+        <span class="hljs-attr">"code"</span>: <span class="hljs-string">"err_account_exists"</span>,
+        <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Email already exists"</span>,
+        <span class="hljs-attr">"trace_id"</span>: <span class="hljs-string">"2dceee25ed1d8ab6"</span>
+    }
+}
+</code></pre>
+            <p>HTTP status codes have the usual meaning:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Code</th>
+                        <th>Reason</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>400</td>
+                        <td>Action failed due to invalid user input.</td>
+                    </tr>
+                    <tr>
+                        <td>401</td>
+                        <td>Not logged in, or not verified.</td>
+                    </tr>
+                    <tr>
+                        <td>403</td>
+                        <td>Insufficient privileges, authentication required.</td>
+                    </tr>
+                    <tr>
+                        <td>404</td>
+                        <td>Entity the action is applied to is not found.</td>
+                    </tr>
+                    <tr>
+                        <td>500</td>
+                        <td>Internal server error.</td>
+                    </tr>
+                    <tr>
+                        <td>503</td>
+                        <td>Temporarily unavailable, retry later.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><a href="/api-doc/error-codes.html">Click here to see the list of all custom error codes.</a></p>
+            <hr>
+            <h2 id="servers">Servers</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Environment</th>
+                        <th>URL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Development</td>
+                        <td><code>https://dev.plat4minc.com</code></td>
+                    </tr>
+                    <tr>
+                        <td>Production</td>
+                        <td><code>https://mystore.plat4minc.com</code></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Make sure always using the right environment.</p>
+            <hr>
+            <h2 id="custom-headers">Custom Headers</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Header</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>X-Plat4m-App-Name</code></td>
+                        <td>Application package name to differentiate Google Play Store and Clover Store apps.</td>
+                    </tr>
+                    <tr>
+                        <td><code>X-Plat4m-App-Instance-Id</code></td>
+                        <td>Unique ID to identify the device.</td>
+                    </tr>
+                    <tr>
+                        <td><code>X-Plat4m-App-Device</code></td>
+                        <td>Device or host metadata. E.g. Model, Brand</td>
+                    </tr>
+                    <tr>
+                        <td><code>X-Plat4m-App-Version</code></td>
+                        <td>Application version.</td>
+                    </tr>
+                    <tr>
+                        <td><code>X-Plat4m-App-Platform</code></td>
+                        <td>Platform metadata. E.g. Android version.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><strong>Note:</strong> Application package names are <strong>constants</strong>. For example
+                <code>com.plat4minc.mystore</code> is for Google Play Store and
+                <code>com.plat4minc.mystore.clover</code> is for Clover Store.</p>
+            <hr>
+            <h2 id="apis">APIs</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Resource</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="/api-doc/admin.html">Admin</a></td>
+                        <td>APIs related to Admin.</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/api-doc/cashier.html">Cashier</a></td>
+                        <td>APIs related to Cashier.</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/api-doc/user.html">User</a></td>
+                        <td>APIs common to Admin and Cashier.</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/api-doc/auth.html">Authentication</a></td>
+                        <td>APIs related to authentication.</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/api-doc/categories.html">Categories</a></td>
+                        <td>APIs related to categories, subcategories and sub-subcategories.</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/api-doc/product.html">Product</a></td>
+                        <td>APIs related to products, temporary and temporary2 products.</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/api-doc/transaction.html">Transaction</a></td>
+                        <td>APIs related to transactions (orders).</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/api-doc/reports.html">Reports</a></td>
+                        <td>APIs related to reports, summary etc.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <h2 id="limitations">Limitations</h2>
+            <ul>
+                <li>Same email cannot be used as both Owner and Cashier.</li>
+            </ul>
+
+        </div>
+    </div>
+
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>

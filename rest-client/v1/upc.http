@@ -1,0 +1,7 @@
+### Check UPC.
+POST {{host}}/api/api/checkUpc
+Content-Type: application/json
+
+{
+    "UPC": "018200250118"
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Codes | Plat4m API Documentation</title>
+    <link rel="stylesheet" href="./assets/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/api-doc/index.html">Plat4m API Documentation</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Error Codes</li>
+            </ol>
+        </nav>
+        <div>
+            <h1 id="custom-error-codes">Custom Error Codes</h1>
+            <p>List of custom error codes sent by the server.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Code</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>err_missing_header</code></td>
+                        <td>Missing header.</td>
+                    </tr>
+                    <tr>
+                        <td><code>err_unauthorized</code></td>
+                        <td>Unauthorized user.</td>
+                    </tr>
+                    <tr>
+                        <td><code>err_forbidden</code></td>
+                        <td>Forbidden.</td>
+                    </tr>
+                    <tr>
+                        <td><code>err_bad_request</code></td>
+                        <td>Bad request. Required data is not as expected.</td>
+                    </tr>
+                    <tr>
+                        <td><code>err_method_not_allowed</code></td>
+                        <td>Method not allowed. Must use proper HTTP method.</td>
+                    </tr>
+                    <tr>
+                        <td><code>err_resource_not_found</code></td>
+                        <td>Resource not found.</td>
+                    </tr>
+                    <tr>
+                        <td><code>err_internal_server_error</code></td>
+                        <td>Internal server error.</td>
+                    </tr>
+                    <tr>
+                        <td><code>err_validation</code></td>
+                        <td>Validation errors.</td>
+                    </tr>
+                    <tr>
+                        <td><code>err_account_exists</code></td>
+                        <td>Account already exists.</td>
+                    </tr>
+                    <tr>
+                        <td><code>err_false_admin</code></td>
+                        <td>False admin.</td>
+                    </tr>
+                    <tr>
+                        <td><code>err_false_cashier</code></td>
+                        <td>False cashier.</td>
+                    </tr>
+                    <tr>
+                        <td><code>err_cashiers_limit_exceeded</code></td>
+                        <td>Cashiers limit exceeded. Cannot create more cashiers.</td>
+                    </tr>
+                    <tr>
+                        <td><code>err_max_logins_reached</code></td>
+                        <td>Maximum number of logins reached.</td>
+                    </tr>
+                    <tr>
+                        <td><code>err_invalid_token</code></td>
+                        <td>Invalid token.</td>
+                    </tr>
+                    <tr>
+                        <td><code>err_user_not_found</code></td>
+                        <td>User not found.</td>
+                    </tr>
+                    <tr>
+                        <td><code>err_order_not_found</code></td>
+                        <td>Order not found.</td>
+                    </tr>
+                    <tr>
+                        <td><code>err_upc_not_found</code></td>
+                        <td>UPC not found.</td>
+                    </tr>
+                    <tr>
+                        <td><code>err_product_not_found</code></td>
+                        <td>Product not found.</td>
+                    </tr>
+                    <tr>
+                        <td><code>err_invalid_otp</code></td>
+                        <td>Invalid OTP.</td>
+                    </tr>
+                    <tr>
+                        <td><code>err_update_product_failed</code></td>
+                        <td>Failed to update product.</td>
+                    </tr>
+                    <tr>
+                        <td><code>err_loggedin_other_device</code></td>
+                        <td>LoggedIn Other Device.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Clients can make use of these codes and make a map of error code and user friendly error messages.</p>
+
+        </div>
+    </div>
+
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>

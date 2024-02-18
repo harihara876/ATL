@@ -1,0 +1,8 @@
+### API Key.
+@apiKey = 08373d7cbbd06cda2baa7806008b498a
+
+### Latitude & Longitude.
+@lat = 3.124
+@lon = 6.173
+
+GET https://api.openweathermap.org/data/2.5/weather?lat={{lat}}&lon={{lon}}&appid={{apiKey}}

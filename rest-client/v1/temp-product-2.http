@@ -1,0 +1,12 @@
+POST {{host}}/api/api/create-temp-product2
+Content-Type: application/json
+
+{
+    "storeadmin_id": 39,
+    "upc": "TEST_UPC",
+    "price": "12.99",
+    "phone": "9908295977",
+    "email": "kpteja030393@gmail.com",
+    "checkbit": 1,
+    "latitude": "3.2"
+}

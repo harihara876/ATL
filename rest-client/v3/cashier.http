@@ -1,0 +1,59 @@
+### Create cashier.
+POST {{host}}/api/v3/cashier/create
+Content-Type: application/json
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 93db3c71-979f-4181-b7ea-b8fdf93b0754
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzQ5MjA0ODQsImp0aSI6IlJLMkhXQ1dDN2pZdXQzVVlQN0c3VEE9PSIsImlzcyI6InBsYXQ0bS5sb2NhbCIsIm5iZiI6MTYzNDkyMDQ4NCwiZXhwIjoxNjM0OTIyMjg0LCJ0eXBlIjoiYWNjZXNzIiwiZGF0YSI6eyJpZCI6IjEwMyIsIm5hbWUiOiJKb2huIERvZSIsImVtYWlsIjoiam9obi5kb2VAZG9tYWluLmNvbSIsInN0b3JlX2FkbWluX2lkIjoiMTAzIiwidHlwZSI6InN0b3JlYWRtaW4iLCJyZWdpc3RlcmVkX2FwcCI6ImNvbS5wbGF0NG1pbmMubXlzdG9yZSJ9fQ.PDAszSkUczff73B_6AAMZ7SFO3t0MJKdnmmjOz82XqwMtt15i4ELFJAtrxE29Ofp6ufpze_-JYcVmZ3jiCt8lQ
+
+{
+    "first_name": "David",
+    "last_name": "Miller",
+    "email": "david.miller@domain.com",
+    "password": "DavidMiller@123",
+    "mobile_number": "+919787678732"
+}
+
+
+
+### Cashier profile.
+GET {{host}}/api/v3/cashier
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 93db3c71-979f-4181-b7ea-b8fdf93b0754
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzQ5MjA4MzAsImp0aSI6ImtWNEkrSm9tWXdONXRwTFdkZXc3d2c9PSIsImlzcyI6InBsYXQ0bS5sb2NhbCIsIm5iZiI6MTYzNDkyMDgzMCwiZXhwIjoxNjM0OTIyNjMwLCJ0eXBlIjoiYWNjZXNzIiwiZGF0YSI6eyJpZCI6Ijg3IiwibmFtZSI6IkRhdmlkIiwiZW1haWwiOiJkYXZpZC5taWxsZXJAZG9tYWluLmNvbSIsInN0b3JlX2FkbWluX2lkIjoiMTAzIiwidHlwZSI6ImNhc2hpZXIiLCJyZWdpc3RlcmVkX2FwcCI6ImNvbS5wbGF0NG1pbmMubXlzdG9yZSJ9fQ.boINJfjVStFQubhU9gHnExHhYJmLdEMMQaQaNp6rujAVI97F30I1sixuFh1wqdrWB0-J304IbU8D8tKj2E3xVg
+
+
+
+### Update cashier.
+PATCH {{host}}/api/v3/cashier/update
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 93db3c71-979f-4181-b7ea-b8fdf93b0754
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzQ5MjA4MzAsImp0aSI6ImtWNEkrSm9tWXdONXRwTFdkZXc3d2c9PSIsImlzcyI6InBsYXQ0bS5sb2NhbCIsIm5iZiI6MTYzNDkyMDgzMCwiZXhwIjoxNjM0OTIyNjMwLCJ0eXBlIjoiYWNjZXNzIiwiZGF0YSI6eyJpZCI6Ijg3IiwibmFtZSI6IkRhdmlkIiwiZW1haWwiOiJkYXZpZC5taWxsZXJAZG9tYWluLmNvbSIsInN0b3JlX2FkbWluX2lkIjoiMTAzIiwidHlwZSI6ImNhc2hpZXIiLCJyZWdpc3RlcmVkX2FwcCI6ImNvbS5wbGF0NG1pbmMubXlzdG9yZSJ9fQ.boINJfjVStFQubhU9gHnExHhYJmLdEMMQaQaNp6rujAVI97F30I1sixuFh1wqdrWB0-J304IbU8D8tKj2E3xVg
+
+{
+    "first_name": "John"
+}
+
+
+
+### Change password.
+POST {{host}}/api/v3/cashier/password/change
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 93db3c71-979f-4181-b7ea-b8fdf93b0754
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzQ5MjA4MzAsImp0aSI6ImtWNEkrSm9tWXdONXRwTFdkZXc3d2c9PSIsImlzcyI6InBsYXQ0bS5sb2NhbCIsIm5iZiI6MTYzNDkyMDgzMCwiZXhwIjoxNjM0OTIyNjMwLCJ0eXBlIjoiYWNjZXNzIiwiZGF0YSI6eyJpZCI6Ijg3IiwibmFtZSI6IkRhdmlkIiwiZW1haWwiOiJkYXZpZC5taWxsZXJAZG9tYWluLmNvbSIsInN0b3JlX2FkbWluX2lkIjoiMTAzIiwidHlwZSI6ImNhc2hpZXIiLCJyZWdpc3RlcmVkX2FwcCI6ImNvbS5wbGF0NG1pbmMubXlzdG9yZSJ9fQ.boINJfjVStFQubhU9gHnExHhYJmLdEMMQaQaNp6rujAVI97F30I1sixuFh1wqdrWB0-J304IbU8D8tKj2E3xVg
+
+{
+    "password": "JameD0e@456",
+    "new_password": "DavidMiller@123"
+}

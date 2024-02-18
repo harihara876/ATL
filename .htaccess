@@ -1,0 +1,5 @@
+RewriteEngine On
+ RewriteRule   ^([a-zA-Z-]+)$	$1.html    [L,NC]
+# php -- BEGIN cPanel-generated handler, do not edit
+# This domain inherits the “PHP” package.
+# php -- END cPanel-generated handler, do not edit

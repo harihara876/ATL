@@ -1,0 +1,69 @@
+### Orders summary
+POST {{host}}/api/v3/reports/orders-summary
+Content-Type: application/json
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 93db3c71-979f-4181-b7ea-b8fdf93b0754
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzU2MTAxOTAsImp0aSI6IlYwRVVBcFwvUDB1RTZYZkdqcCtQOGh3PT0iLCJpc3MiOiJwbGF0NG0ubG9jYWwiLCJuYmYiOjE2MzU2MTAxOTAsImV4cCI6MTYzNTYxMTk5MCwidHlwZSI6ImFjY2VzcyIsImRhdGEiOnsiaWQiOiIyNiIsIm5hbWUiOiJTdGFuZGFyZCBMaXF1b3IiLCJlbWFpbCI6InN0YW5kYXJkbGlxdW9yQGdtYWlsLmNvbSIsInN0b3JlX2FkbWluX2lkIjoiMjYiLCJ0eXBlIjoic3RvcmVhZG1pbiIsInJlZ2lzdGVyZWRfYXBwIjoiY29tLnBsYXQ0bWluYy5teXN0b3JlIn19.XsDQLOiIS61hKtHk39A_xm6LSmbivBkS6sDDMtHribYi0ethtkb_TVF9A8Cibmra2G36NmIJ2bh9QrOL6cyZ_w
+
+{
+    "from_date": "05/14/2021",
+    "from_time": "12:00 AM",
+    "to_date": "05/16/2021",
+    "to_time": "11:59 PM",
+    "tzID": "America/Los_Angeles"
+}
+
+
+
+### Product sales.
+POST {{host}}/api/v3/reports/product-sales
+Content-Type: application/json
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 93db3c71-979f-4181-b7ea-b8fdf93b0754
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzU2MTIxOTIsImp0aSI6Im0wKzlINjRRVTJJUDJyYjlHZU1yXC9nPT0iLCJpc3MiOiJwbGF0NG0ubG9jYWwiLCJuYmYiOjE2MzU2MTIxOTIsImV4cCI6MTYzNTYxMzk5MiwidHlwZSI6ImFjY2VzcyIsImRhdGEiOnsiaWQiOiIyNiIsIm5hbWUiOiJTdGFuZGFyZCBMaXF1b3IiLCJlbWFpbCI6InN0YW5kYXJkbGlxdW9yQGdtYWlsLmNvbSIsInN0b3JlX2FkbWluX2lkIjoiMjYiLCJ0eXBlIjoic3RvcmVhZG1pbiIsInJlZ2lzdGVyZWRfYXBwIjoiY29tLnBsYXQ0bWluYy5teXN0b3JlIn19.PPQ1c4G205w8kowRanrxvoI0vaSjG3mcBOKqAuYMyDx14RHoUPrIu-bPQlGjCN8vdlc3kfljEPXyT3fz-oqZMw
+
+{
+    "from_date": "05/14/2021",
+    "from_time": "12:00 AM",
+    "to_date": "05/16/2021",
+    "to_time": "11:59 PM",
+    "tzID": "America/Los_Angeles"
+}
+
+
+
+### Transactions.
+POST {{host}}/api/v3/reports/transactions
+Content-Type: application/json
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 93db3c71-979f-4181-b7ea-b8fdf93b0754
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzU2MTIxOTIsImp0aSI6Im0wKzlINjRRVTJJUDJyYjlHZU1yXC9nPT0iLCJpc3MiOiJwbGF0NG0ubG9jYWwiLCJuYmYiOjE2MzU2MTIxOTIsImV4cCI6MTYzNTYxMzk5MiwidHlwZSI6ImFjY2VzcyIsImRhdGEiOnsiaWQiOiIyNiIsIm5hbWUiOiJTdGFuZGFyZCBMaXF1b3IiLCJlbWFpbCI6InN0YW5kYXJkbGlxdW9yQGdtYWlsLmNvbSIsInN0b3JlX2FkbWluX2lkIjoiMjYiLCJ0eXBlIjoic3RvcmVhZG1pbiIsInJlZ2lzdGVyZWRfYXBwIjoiY29tLnBsYXQ0bWluYy5teXN0b3JlIn19.PPQ1c4G205w8kowRanrxvoI0vaSjG3mcBOKqAuYMyDx14RHoUPrIu-bPQlGjCN8vdlc3kfljEPXyT3fz-oqZMw
+
+{
+    "from_date": "05/14/2021",
+    "from_time": "12:00 AM",
+    "to_date": "05/16/2021",
+    "to_time": "11:59 PM",
+    "tzID": "America/Los_Angeles"
+}
+
+
+
+### View transaction.
+GET {{host}}/api/v3/reports/transaction/3705001405210031
+Content-Type: application/json
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 93db3c71-979f-4181-b7ea-b8fdf93b0754
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzU2MTIxOTIsImp0aSI6Im0wKzlINjRRVTJJUDJyYjlHZU1yXC9nPT0iLCJpc3MiOiJwbGF0NG0ubG9jYWwiLCJuYmYiOjE2MzU2MTIxOTIsImV4cCI6MTYzNTYxMzk5MiwidHlwZSI6ImFjY2VzcyIsImRhdGEiOnsiaWQiOiIyNiIsIm5hbWUiOiJTdGFuZGFyZCBMaXF1b3IiLCJlbWFpbCI6InN0YW5kYXJkbGlxdW9yQGdtYWlsLmNvbSIsInN0b3JlX2FkbWluX2lkIjoiMjYiLCJ0eXBlIjoic3RvcmVhZG1pbiIsInJlZ2lzdGVyZWRfYXBwIjoiY29tLnBsYXQ0bWluYy5teXN0b3JlIn19.PPQ1c4G205w8kowRanrxvoI0vaSjG3mcBOKqAuYMyDx14RHoUPrIu-bPQlGjCN8vdlc3kfljEPXyT3fz-oqZMw

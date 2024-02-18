@@ -1,0 +1,27 @@
+### Orders summary.
+POST {{host}}/api/api/order-summary
+Content-Type: application/json
+
+{
+    "storeid": 26,
+    "from_date": "05/14/2021",
+    "from_time": "12:00 AM",
+    "to_date": "05/16/2021",
+    "to_time": "11:59 PM",
+    "tzID": "America/Los_Angeles"
+}
+
+
+
+### Product sales.
+POST {{host}}/api/api/reports/product-sales
+Content-Type: application/json
+
+{
+    "storeid": 26,
+    "from_date": "05/14/2021",
+    "from_time": "12:00 AM",
+    "to_date": "05/16/2021",
+    "to_time": "11:59 PM",
+    "tzID": "America/Los_Angeles"
+}

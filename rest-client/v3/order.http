@@ -1,0 +1,82 @@
+### Create order.
+POST {{host}}/api/v3/orders/create
+Content-Type: application/json
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 93db3c71-979f-4181-b7ea-b8fdf93b0754
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2Mzc0ODc4OTIsImp0aSI6ImxZcVJsSEVkenJFQWJNYWRtak45eUE9PSIsImlzcyI6InBsYXQ0bS5sb2NhbCIsIm5iZiI6MTYzNzQ4Nzg5MiwiZXhwIjoxNjM3NDg5NjkyLCJ0eXBlIjoiYWNjZXNzIiwiZGF0YSI6eyJpZCI6MzMsIm5hbWUiOiJMYWtlIFZpc3RhICIsImVtYWlsIjoibGFrZXZpc3RhbGlxdW9yc0B0M3N0b3Jlcy5jb20iLCJzdG9yZV9hZG1pbl9pZCI6MzMsInR5cGUiOiJzdG9yZWFkbWluIiwicmVnaXN0ZXJlZF9hcHAiOiJjb20ucGxhdDRtaW5jLm15c3RvcmUifX0.BRNVQ1eEXV64_hNRzlAhin43cXnMr7maD1YXQ7vU8MjCNCWVR_QJEXJ1Obe_YTF5PTSGQ_wUdPwmH-Pb-ZAMkg
+
+[
+   {
+      "order_uuid":"3247100707210033",
+      "total_amount":21.53,
+      "payment_mode":"cash",
+      "latitude":"37.397672",
+      "longitude":"-121.9953998",
+      "localtime":"10:47:14 AM",
+      "products":[
+         {
+            "product_id":1000370007,
+            "name": "P1",
+            "quantity":1,
+            "selling_price":6.99,
+            "tax":0.09,
+            "special_value":0.0
+         },
+         {
+            "product_id":1000370004,
+            "name": "P2",
+            "quantity":1,
+            "selling_price":9.0,
+            "tax":0.09,
+            "special_value":0.0
+         },
+         {
+            "product_id":1000374651,
+            "name": "P3",
+            "quantity":1,
+            "selling_price":2.0,
+            "tax":0.0,
+            "special_value":0.0
+         },
+         {
+            "product_id":1000374650,
+            "name": "P4",
+            "quantity":1,
+            "selling_price":2.0,
+            "tax":0.0,
+            "special_value":0.0
+         }
+      ]
+   }
+]
+
+
+
+### Get order.
+GET {{host}}/api/v3/order/53378
+Content-Type: application/json
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 93db3c71-979f-4181-b7ea-b8fdf93b0754
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2Mzc1Nzg0NjAsImp0aSI6IjE5VTM3S2ZScm52clh5Z0pscnRNOXc9PSIsImlzcyI6InBsYXQ0bS5sb2NhbCIsIm5iZiI6MTYzNzU3ODQ2MCwiZXhwIjoxNjM3NTgwMjYwLCJ0eXBlIjoiYWNjZXNzIiwiZGF0YSI6eyJpZCI6MzMsIm5hbWUiOiJMYWtlIFZpc3RhICIsImVtYWlsIjoibGFrZXZpc3RhbGlxdW9yc0B0M3N0b3Jlcy5jb20iLCJzdG9yZV9hZG1pbl9pZCI6MzMsInR5cGUiOiJzdG9yZWFkbWluIiwicmVnaXN0ZXJlZF9hcHAiOiJjb20ucGxhdDRtaW5jLm15c3RvcmUifX0.vNGoAP0RXKi6kX0y6UIaUWUA3vKW6UrBoplDqGDgNnMbTR8Zy8385jhVjXRFpl6CMeFkqLQ-hwExwjJG_uOAqw
+
+
+
+### Update order status.
+POST {{host}}/api/v3/order/53378/status/update
+Content-Type: application/json
+X-Plat4m-App-Name: com.plat4minc.mystore
+X-Plat4m-App-Instance-Id: 93db3c71-979f-4181-b7ea-b8fdf93b0754
+X-Plat4m-App-Device: Samsung Galaxy Note 10 Lite
+X-Plat4m-App-Version: 1.2.3
+X-Plat4m-App-Platform: android10
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2Mzc1Nzg0NjAsImp0aSI6IjE5VTM3S2ZScm52clh5Z0pscnRNOXc9PSIsImlzcyI6InBsYXQ0bS5sb2NhbCIsIm5iZiI6MTYzNzU3ODQ2MCwiZXhwIjoxNjM3NTgwMjYwLCJ0eXBlIjoiYWNjZXNzIiwiZGF0YSI6eyJpZCI6MzMsIm5hbWUiOiJMYWtlIFZpc3RhICIsImVtYWlsIjoibGFrZXZpc3RhbGlxdW9yc0B0M3N0b3Jlcy5jb20iLCJzdG9yZV9hZG1pbl9pZCI6MzMsInR5cGUiOiJzdG9yZWFkbWluIiwicmVnaXN0ZXJlZF9hcHAiOiJjb20ucGxhdDRtaW5jLm15c3RvcmUifX0.vNGoAP0RXKi6kX0y6UIaUWUA3vKW6UrBoplDqGDgNnMbTR8Zy8385jhVjXRFpl6CMeFkqLQ-hwExwjJG_uOAqw
+
+{
+   "status": "Complete"
+}
